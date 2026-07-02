@@ -6,6 +6,16 @@ namespace configApp
 {
     public class ConfigAppManager
     {
+        private ConfigFileManager configFile;
 
+        public ConfigAppManager()
+        {
+            configFile = new ConfigFileManager();
+        }
+
+        public DateTime GetLastChangeTime()
+        {
+            return DateTime.Now;
+        }
     }
 }

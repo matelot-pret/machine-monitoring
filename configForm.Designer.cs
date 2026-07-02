@@ -105,14 +105,12 @@
             textBox5 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
+            checkBox_SSL = new CheckBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label39 = new Label();
             label38 = new Label();
             label37 = new Label();
-            label36 = new Label();
             label35 = new Label();
             label34 = new Label();
             label_last_change_time = new Label();
@@ -793,14 +791,12 @@
             panel_manage_config.Controls.Add(textBox5);
             panel_manage_config.Controls.Add(textBox4);
             panel_manage_config.Controls.Add(textBox3);
-            panel_manage_config.Controls.Add(checkBox2);
-            panel_manage_config.Controls.Add(checkBox1);
+            panel_manage_config.Controls.Add(checkBox_SSL);
             panel_manage_config.Controls.Add(textBox2);
             panel_manage_config.Controls.Add(textBox1);
             panel_manage_config.Controls.Add(label39);
             panel_manage_config.Controls.Add(label38);
             panel_manage_config.Controls.Add(label37);
-            panel_manage_config.Controls.Add(label36);
             panel_manage_config.Controls.Add(label35);
             panel_manage_config.Controls.Add(label34);
             panel_manage_config.Location = new Point(12, 122);
@@ -882,27 +878,16 @@
             textBox3.Size = new Size(153, 26);
             textBox3.TabIndex = 10;
             // 
-            // checkBox2
+            // checkBox_SSL
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(379, 235);
-            checkBox2.Name = "checkBox2";
-            checkBox2.RightToLeft = RightToLeft.Yes;
-            checkBox2.Size = new Size(46, 22);
-            checkBox2.TabIndex = 9;
-            checkBox2.Text = "No\r\n";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(298, 235);
-            checkBox1.Name = "checkBox1";
-            checkBox1.RightToLeft = RightToLeft.Yes;
-            checkBox1.Size = new Size(50, 22);
-            checkBox1.TabIndex = 8;
-            checkBox1.Text = "Yes";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBox_SSL.AutoSize = true;
+            checkBox_SSL.Location = new Point(182, 239);
+            checkBox_SSL.Name = "checkBox_SSL";
+            checkBox_SSL.RightToLeft = RightToLeft.Yes;
+            checkBox_SSL.Size = new Size(113, 22);
+            checkBox_SSL.TabIndex = 8;
+            checkBox_SSL.Text = "Activate SSL";
+            checkBox_SSL.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -946,15 +931,6 @@
             label37.Size = new Size(153, 18);
             label37.TabIndex = 3;
             label37.Text = "Sender mail address :";
-            // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.Location = new Point(182, 236);
-            label36.Name = "label36";
-            label36.Size = new Size(101, 18);
-            label36.TabIndex = 2;
-            label36.Text = "Activate SSL :";
             // 
             // label35
             // 
@@ -1139,17 +1115,15 @@
         private Panel panel_manage_config;
         private Label label35;
         private Label label34;
-        private CheckBox checkBox1;
+        private CheckBox checkBox_SSL;
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label39;
         private Label label38;
         private Label label37;
-        private Label label36;
         private TextBox textBox5;
         private TextBox textBox4;
         private TextBox textBox3;
-        private CheckBox checkBox2;
         private Label label40;
         private Label label42;
         private Label label41;
