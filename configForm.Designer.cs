@@ -96,29 +96,29 @@
             textBox_machine1_name = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            panel_manage_config = new Panel();
+            label44 = new Label();
+            label43 = new Label();
+            label42 = new Label();
+            label41 = new Label();
+            label40 = new Label();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label39 = new Label();
+            label38 = new Label();
+            label37 = new Label();
+            label36 = new Label();
+            label35 = new Label();
+            label34 = new Label();
             label_last_change_time = new Label();
             button_reset = new Button();
             button_exit_config = new Button();
             button_exit_config_launch_main = new Button();
-            panel1 = new Panel();
-            label34 = new Label();
-            label35 = new Label();
-            label36 = new Label();
-            label37 = new Label();
-            label38 = new Label();
-            label39 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            label40 = new Label();
-            label41 = new Label();
-            label42 = new Label();
-            label43 = new Label();
-            label44 = new Label();
             panel_manage_machine.SuspendLayout();
             panel_machine_8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine8_interval).BeginInit();
@@ -136,7 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine2_interval).BeginInit();
             panel_machine_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine1_interval).BeginInit();
-            panel1.SuspendLayout();
+            panel_manage_config.SuspendLayout();
             SuspendLayout();
             // 
             // button_manage_machine
@@ -149,6 +149,7 @@
             button_manage_machine.TabIndex = 0;
             button_manage_machine.Text = "Manage Machine(s) Configuration";
             button_manage_machine.UseVisualStyleBackColor = true;
+            button_manage_machine.Click += button_manage_machine_Click;
             // 
             // button_manage_notification
             // 
@@ -160,11 +161,11 @@
             button_manage_notification.TabIndex = 1;
             button_manage_notification.Text = "Manage Notification configuration";
             button_manage_notification.UseVisualStyleBackColor = true;
+            button_manage_notification.Click += button_manage_notification_Click;
             // 
             // panel_manage_machine
             // 
             panel_manage_machine.BorderStyle = BorderStyle.Fixed3D;
-            panel_manage_machine.Controls.Add(panel1);
             panel_manage_machine.Controls.Add(label33);
             panel_manage_machine.Controls.Add(label32);
             panel_manage_machine.Controls.Add(label31);
@@ -261,6 +262,7 @@
             // 
             // panel_machine_8
             // 
+            panel_machine_8.BorderStyle = BorderStyle.FixedSingle;
             panel_machine_8.Controls.Add(numericUpDown_machine8_interval);
             panel_machine_8.Controls.Add(label23);
             panel_machine_8.Controls.Add(textBox_machine8_ipv4);
@@ -324,6 +326,7 @@
             // 
             // panel_machine_7
             // 
+            panel_machine_7.BorderStyle = BorderStyle.FixedSingle;
             panel_machine_7.Controls.Add(numericUpDown_machine7_interval);
             panel_machine_7.Controls.Add(label20);
             panel_machine_7.Controls.Add(textBox_machine7_ipv4);
@@ -387,6 +390,7 @@
             // 
             // panel_machine_6
             // 
+            panel_machine_6.BorderStyle = BorderStyle.FixedSingle;
             panel_machine_6.Controls.Add(numericUnumericUpDown_machine6_interval);
             panel_machine_6.Controls.Add(label17);
             panel_machine_6.Controls.Add(textBox_machine6_ipv4);
@@ -450,6 +454,7 @@
             // 
             // panel_machine_5
             // 
+            panel_machine_5.BorderStyle = BorderStyle.FixedSingle;
             panel_machine_5.Controls.Add(numericUpDnumericUpDown_machine5_intervalown4);
             panel_machine_5.Controls.Add(label14);
             panel_machine_5.Controls.Add(textBox_machine5_ipv4);
@@ -513,6 +518,7 @@
             // 
             // panel_machine_4
             // 
+            panel_machine_4.BorderStyle = BorderStyle.FixedSingle;
             panel_machine_4.Controls.Add(numericUpDown_machine4_interval);
             panel_machine_4.Controls.Add(label11);
             panel_machine_4.Controls.Add(textBox_machine4_ipv4);
@@ -576,6 +582,7 @@
             // 
             // panel_machine_3
             // 
+            panel_machine_3.BorderStyle = BorderStyle.FixedSingle;
             panel_machine_3.Controls.Add(numericUpDown_machine3_interval);
             panel_machine_3.Controls.Add(label8);
             panel_machine_3.Controls.Add(textBox_machine3_ipv4);
@@ -639,6 +646,7 @@
             // 
             // panel_machine_2
             // 
+            panel_machine_2.BorderStyle = BorderStyle.FixedSingle;
             panel_machine_2.Controls.Add(numericUpDown_machine2_interval);
             panel_machine_2.Controls.Add(label5);
             panel_machine_2.Controls.Add(textBox_machine2_ipv4);
@@ -702,6 +710,7 @@
             // 
             // panel_machine_1
             // 
+            panel_machine_1.BorderStyle = BorderStyle.FixedSingle;
             panel_machine_1.Controls.Add(numericUpDown_machine1_interval);
             panel_machine_1.Controls.Add(label4);
             panel_machine_1.Controls.Add(textBox_machine1_ipv4);
@@ -773,6 +782,198 @@
             label1.TabIndex = 0;
             label1.Text = "Machine to monitor. The maximum number of machine to monitor is 8\r\n";
             // 
+            // panel_manage_config
+            // 
+            panel_manage_config.BorderStyle = BorderStyle.Fixed3D;
+            panel_manage_config.Controls.Add(label44);
+            panel_manage_config.Controls.Add(label43);
+            panel_manage_config.Controls.Add(label42);
+            panel_manage_config.Controls.Add(label41);
+            panel_manage_config.Controls.Add(label40);
+            panel_manage_config.Controls.Add(textBox5);
+            panel_manage_config.Controls.Add(textBox4);
+            panel_manage_config.Controls.Add(textBox3);
+            panel_manage_config.Controls.Add(checkBox2);
+            panel_manage_config.Controls.Add(checkBox1);
+            panel_manage_config.Controls.Add(textBox2);
+            panel_manage_config.Controls.Add(textBox1);
+            panel_manage_config.Controls.Add(label39);
+            panel_manage_config.Controls.Add(label38);
+            panel_manage_config.Controls.Add(label37);
+            panel_manage_config.Controls.Add(label36);
+            panel_manage_config.Controls.Add(label35);
+            panel_manage_config.Controls.Add(label34);
+            panel_manage_config.Location = new Point(12, 122);
+            panel_manage_config.Name = "panel_manage_config";
+            panel_manage_config.Size = new Size(1170, 597);
+            panel_manage_config.TabIndex = 16;
+            // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label44.Location = new Point(182, 114);
+            label44.Name = "label44";
+            label44.Size = new Size(291, 20);
+            label44.TabIndex = 17;
+            label44.Text = "The smtp of the host that will sent the mail";
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label43.Location = new Point(182, 183);
+            label43.Name = "label43";
+            label43.Size = new Size(326, 20);
+            label43.TabIndex = 16;
+            label43.Text = "The port from which the smtp will communicate";
+            // 
+            // label42
+            // 
+            label42.AutoSize = true;
+            label42.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label42.Location = new Point(182, 317);
+            label42.Name = "label42";
+            label42.Size = new Size(309, 20);
+            label42.TabIndex = 15;
+            label42.Text = "The mail from which notifications will be sent\r\n";
+            // 
+            // label41
+            // 
+            label41.AutoSize = true;
+            label41.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label41.Location = new Point(182, 401);
+            label41.Name = "label41";
+            label41.Size = new Size(355, 20);
+            label41.TabIndex = 14;
+            label41.Text = "The password of the account linked to the smtp host";
+            // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label40.Location = new Point(182, 478);
+            label40.Name = "label40";
+            label40.Size = new Size(285, 20);
+            label40.TabIndex = 13;
+            label40.Text = "The mail that will receive the notifications";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(349, 449);
+            textBox5.Name = "textBox5";
+            textBox5.PlaceholderText = "Enter the mail";
+            textBox5.Size = new Size(145, 26);
+            textBox5.TabIndex = 12;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(270, 372);
+            textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = "Enter the password";
+            textBox4.Size = new Size(142, 26);
+            textBox4.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(341, 288);
+            textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "Enter the mail";
+            textBox3.Size = new Size(153, 26);
+            textBox3.TabIndex = 10;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(379, 235);
+            checkBox2.Name = "checkBox2";
+            checkBox2.RightToLeft = RightToLeft.Yes;
+            checkBox2.Size = new Size(46, 22);
+            checkBox2.TabIndex = 9;
+            checkBox2.Text = "No\r\n";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(298, 235);
+            checkBox1.Name = "checkBox1";
+            checkBox1.RightToLeft = RightToLeft.Yes;
+            checkBox1.Size = new Size(50, 22);
+            checkBox1.TabIndex = 8;
+            checkBox1.Text = "Yes";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(230, 154);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "Enter the port";
+            textBox2.Size = new Size(100, 26);
+            textBox2.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(274, 86);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Enter the SMTP host";
+            textBox1.Size = new Size(153, 26);
+            textBox1.TabIndex = 6;
+            // 
+            // label39
+            // 
+            label39.AutoSize = true;
+            label39.Location = new Point(182, 452);
+            label39.Name = "label39";
+            label39.Size = new Size(166, 18);
+            label39.TabIndex = 5;
+            label39.Text = "Receiver Mail Address :";
+            // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.Location = new Point(182, 375);
+            label38.Name = "label38";
+            label38.Size = new Size(82, 18);
+            label38.TabIndex = 4;
+            label38.Text = "Password :";
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.Location = new Point(182, 291);
+            label37.Name = "label37";
+            label37.Size = new Size(153, 18);
+            label37.TabIndex = 3;
+            label37.Text = "Sender mail address :";
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Location = new Point(182, 236);
+            label36.Name = "label36";
+            label36.Size = new Size(101, 18);
+            label36.TabIndex = 2;
+            label36.Text = "Activate SSL :";
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Location = new Point(182, 157);
+            label35.Name = "label35";
+            label35.Size = new Size(42, 18);
+            label35.TabIndex = 1;
+            label35.Text = "Port :";
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new Point(182, 89);
+            label34.Name = "label34";
+            label34.Size = new Size(88, 18);
+            label34.TabIndex = 0;
+            label34.Text = "SMTP Host :";
+            // 
             // label_last_change_time
             // 
             label_last_change_time.AutoSize = true;
@@ -809,204 +1010,15 @@
             button_exit_config_launch_main.Text = "Exit configuration and launch monitoring\r\n";
             button_exit_config_launch_main.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            panel1.Controls.Add(label44);
-            panel1.Controls.Add(label43);
-            panel1.Controls.Add(label42);
-            panel1.Controls.Add(label41);
-            panel1.Controls.Add(label40);
-            panel1.Controls.Add(textBox5);
-            panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(checkBox2);
-            panel1.Controls.Add(checkBox1);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(label39);
-            panel1.Controls.Add(label38);
-            panel1.Controls.Add(label37);
-            panel1.Controls.Add(label36);
-            panel1.Controls.Add(label35);
-            panel1.Controls.Add(label34);
-            panel1.Location = new Point(-2, -2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1170, 597);
-            panel1.TabIndex = 16;
-            // 
-            // label34
-            // 
-            label34.AutoSize = true;
-            label34.Location = new Point(182, 89);
-            label34.Name = "label34";
-            label34.Size = new Size(88, 18);
-            label34.TabIndex = 0;
-            label34.Text = "SMTP Host :";
-            // 
-            // label35
-            // 
-            label35.AutoSize = true;
-            label35.Location = new Point(182, 157);
-            label35.Name = "label35";
-            label35.Size = new Size(42, 18);
-            label35.TabIndex = 1;
-            label35.Text = "Port :";
-            // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.Location = new Point(182, 236);
-            label36.Name = "label36";
-            label36.Size = new Size(101, 18);
-            label36.TabIndex = 2;
-            label36.Text = "Activate SSL :";
-            // 
-            // label37
-            // 
-            label37.AutoSize = true;
-            label37.Location = new Point(182, 291);
-            label37.Name = "label37";
-            label37.Size = new Size(153, 18);
-            label37.TabIndex = 3;
-            label37.Text = "Sender mail address :";
-            // 
-            // label38
-            // 
-            label38.AutoSize = true;
-            label38.Location = new Point(182, 375);
-            label38.Name = "label38";
-            label38.Size = new Size(82, 18);
-            label38.TabIndex = 4;
-            label38.Text = "Password :";
-            // 
-            // label39
-            // 
-            label39.AutoSize = true;
-            label39.Location = new Point(182, 452);
-            label39.Name = "label39";
-            label39.Size = new Size(166, 18);
-            label39.TabIndex = 5;
-            label39.Text = "Receiver Mail Address :";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(274, 86);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Enter the SMTP host";
-            textBox1.Size = new Size(153, 26);
-            textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(230, 154);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Enter the port";
-            textBox2.Size = new Size(100, 26);
-            textBox2.TabIndex = 7;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(298, 235);
-            checkBox1.Name = "checkBox1";
-            checkBox1.RightToLeft = RightToLeft.Yes;
-            checkBox1.Size = new Size(50, 22);
-            checkBox1.TabIndex = 8;
-            checkBox1.Text = "Yes";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(379, 235);
-            checkBox2.Name = "checkBox2";
-            checkBox2.RightToLeft = RightToLeft.Yes;
-            checkBox2.Size = new Size(46, 22);
-            checkBox2.TabIndex = 9;
-            checkBox2.Text = "No\r\n";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(341, 288);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Enter the mail";
-            textBox3.Size = new Size(153, 26);
-            textBox3.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(270, 372);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Enter the password";
-            textBox4.Size = new Size(142, 26);
-            textBox4.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(349, 449);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Enter the mail";
-            textBox5.Size = new Size(145, 26);
-            textBox5.TabIndex = 12;
-            // 
-            // label40
-            // 
-            label40.AutoSize = true;
-            label40.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label40.Location = new Point(182, 478);
-            label40.Name = "label40";
-            label40.Size = new Size(285, 20);
-            label40.TabIndex = 13;
-            label40.Text = "The mail that will receive the notifications";
-            // 
-            // label41
-            // 
-            label41.AutoSize = true;
-            label41.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label41.Location = new Point(182, 401);
-            label41.Name = "label41";
-            label41.Size = new Size(355, 20);
-            label41.TabIndex = 14;
-            label41.Text = "The password of the account linked to the smtp host";
-            // 
-            // label42
-            // 
-            label42.AutoSize = true;
-            label42.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label42.Location = new Point(182, 317);
-            label42.Name = "label42";
-            label42.Size = new Size(309, 20);
-            label42.TabIndex = 15;
-            label42.Text = "The mail from which notifications will be sent\r\n";
-            // 
-            // label43
-            // 
-            label43.AutoSize = true;
-            label43.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label43.Location = new Point(182, 183);
-            label43.Name = "label43";
-            label43.Size = new Size(326, 20);
-            label43.TabIndex = 16;
-            label43.Text = "The port from which the smtp will communicate";
-            // 
-            // label44
-            // 
-            label44.AutoSize = true;
-            label44.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label44.Location = new Point(182, 114);
-            label44.Name = "label44";
-            label44.Size = new Size(291, 20);
-            label44.TabIndex = 17;
-            label44.Text = "The smtp of the host that will sent the mail";
-            // 
             // configForm
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(1194, 831);
+            Controls.Add(panel_manage_config);
             Controls.Add(button_exit_config_launch_main);
             Controls.Add(button_exit_config);
             Controls.Add(button_reset);
@@ -1044,8 +1056,8 @@
             panel_machine_1.ResumeLayout(false);
             panel_machine_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine1_interval).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel_manage_config.ResumeLayout(false);
+            panel_manage_config.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1124,7 +1136,7 @@
         private Button button_reset;
         private Button button_exit_config;
         private Button button_exit_config_launch_main;
-        private Panel panel1;
+        private Panel panel_manage_config;
         private Label label35;
         private Label label34;
         private CheckBox checkBox1;

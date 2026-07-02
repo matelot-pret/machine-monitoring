@@ -1,0 +1,16 @@
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\bin\Debug\net10.0-windows\configApp.exe
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\bin\Debug\net10.0-windows\configApp.deps.json
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\bin\Debug\net10.0-windows\configApp.runtimeconfig.json
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\bin\Debug\net10.0-windows\configApp.dll
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\bin\Debug\net10.0-windows\configApp.pdb
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.configForm.resources
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.csproj.GenerateResource.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.AssemblyInfoInputs.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.AssemblyInfo.cs
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.csproj.CoreCompileInputs.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.dll
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\refint\configApp.dll
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.pdb
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\configApp.genruntimeconfig.cache
+C:\Users\samou\Documents\_partage\Bloc 2\C#\seconde_sess\SAMOU_Patrick\machineMonitoring\configApp\obj\Debug\net10.0-windows\ref\configApp.dll
