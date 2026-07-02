@@ -100,6 +100,25 @@
             button_reset = new Button();
             button_exit_config = new Button();
             button_exit_config_launch_main = new Button();
+            panel1 = new Panel();
+            label34 = new Label();
+            label35 = new Label();
+            label36 = new Label();
+            label37 = new Label();
+            label38 = new Label();
+            label39 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            label40 = new Label();
+            label41 = new Label();
+            label42 = new Label();
+            label43 = new Label();
+            label44 = new Label();
             panel_manage_machine.SuspendLayout();
             panel_machine_8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine8_interval).BeginInit();
@@ -117,32 +136,35 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine2_interval).BeginInit();
             panel_machine_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine1_interval).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // button_manage_machine
             // 
             button_manage_machine.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_manage_machine.Location = new Point(284, 13);
+            button_manage_machine.Location = new Point(284, 24);
             button_manage_machine.Margin = new Padding(3, 4, 3, 4);
             button_manage_machine.Name = "button_manage_machine";
             button_manage_machine.Size = new Size(153, 44);
             button_manage_machine.TabIndex = 0;
-            button_manage_machine.Text = "Manage Machine";
+            button_manage_machine.Text = "Manage Machine(s) Configuration";
             button_manage_machine.UseVisualStyleBackColor = true;
             // 
             // button_manage_notification
             // 
             button_manage_notification.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_manage_notification.Location = new Point(741, 13);
+            button_manage_notification.Location = new Point(741, 24);
             button_manage_notification.Margin = new Padding(3, 4, 3, 4);
             button_manage_notification.Name = "button_manage_notification";
             button_manage_notification.Size = new Size(159, 44);
             button_manage_notification.TabIndex = 1;
-            button_manage_notification.Text = "Manage Notifications";
+            button_manage_notification.Text = "Manage Notification configuration";
             button_manage_notification.UseVisualStyleBackColor = true;
             // 
             // panel_manage_machine
             // 
+            panel_manage_machine.BorderStyle = BorderStyle.Fixed3D;
+            panel_manage_machine.Controls.Add(panel1);
             panel_manage_machine.Controls.Add(label33);
             panel_manage_machine.Controls.Add(label32);
             panel_manage_machine.Controls.Add(label31);
@@ -162,7 +184,7 @@
             panel_manage_machine.Controls.Add(label1);
             panel_manage_machine.Location = new Point(12, 122);
             panel_manage_machine.Name = "panel_manage_machine";
-            panel_manage_machine.Size = new Size(1170, 585);
+            panel_manage_machine.Size = new Size(1170, 597);
             panel_manage_machine.TabIndex = 2;
             // 
             // label33
@@ -270,7 +292,8 @@
             // 
             textBox_machine8_ipv4.Location = new Point(124, 56);
             textBox_machine8_ipv4.Name = "textBox_machine8_ipv4";
-            textBox_machine8_ipv4.Size = new Size(100, 26);
+            textBox_machine8_ipv4.PlaceholderText = "Enter the IPv4 Address";
+            textBox_machine8_ipv4.Size = new Size(160, 26);
             textBox_machine8_ipv4.TabIndex = 3;
             // 
             // label24
@@ -286,6 +309,7 @@
             // 
             textBox_machine8_name.Location = new Point(74, 14);
             textBox_machine8_name.Name = "textBox_machine8_name";
+            textBox_machine8_name.PlaceholderText = "Enter the name";
             textBox_machine8_name.Size = new Size(100, 26);
             textBox_machine8_name.TabIndex = 1;
             // 
@@ -331,7 +355,8 @@
             // 
             textBox_machine7_ipv4.Location = new Point(124, 56);
             textBox_machine7_ipv4.Name = "textBox_machine7_ipv4";
-            textBox_machine7_ipv4.Size = new Size(100, 26);
+            textBox_machine7_ipv4.PlaceholderText = "Enter the IPv4 Address";
+            textBox_machine7_ipv4.Size = new Size(160, 26);
             textBox_machine7_ipv4.TabIndex = 3;
             // 
             // label21
@@ -347,6 +372,7 @@
             // 
             textBox_machine7_name.Location = new Point(74, 14);
             textBox_machine7_name.Name = "textBox_machine7_name";
+            textBox_machine7_name.PlaceholderText = "Enter the name";
             textBox_machine7_name.Size = new Size(100, 26);
             textBox_machine7_name.TabIndex = 1;
             // 
@@ -392,7 +418,8 @@
             // 
             textBox_machine6_ipv4.Location = new Point(124, 56);
             textBox_machine6_ipv4.Name = "textBox_machine6_ipv4";
-            textBox_machine6_ipv4.Size = new Size(100, 26);
+            textBox_machine6_ipv4.PlaceholderText = "Enter the IPv4 Address";
+            textBox_machine6_ipv4.Size = new Size(160, 26);
             textBox_machine6_ipv4.TabIndex = 3;
             // 
             // label18
@@ -408,6 +435,7 @@
             // 
             textBox_machine6_name.Location = new Point(74, 14);
             textBox_machine6_name.Name = "textBox_machine6_name";
+            textBox_machine6_name.PlaceholderText = "Enter the name";
             textBox_machine6_name.Size = new Size(100, 26);
             textBox_machine6_name.TabIndex = 1;
             // 
@@ -453,7 +481,8 @@
             // 
             textBox_machine5_ipv4.Location = new Point(124, 56);
             textBox_machine5_ipv4.Name = "textBox_machine5_ipv4";
-            textBox_machine5_ipv4.Size = new Size(100, 26);
+            textBox_machine5_ipv4.PlaceholderText = "Enter the IPv4 Address";
+            textBox_machine5_ipv4.Size = new Size(160, 26);
             textBox_machine5_ipv4.TabIndex = 3;
             // 
             // label15
@@ -469,6 +498,7 @@
             // 
             textBox_machine5_name.Location = new Point(74, 14);
             textBox_machine5_name.Name = "textBox_machine5_name";
+            textBox_machine5_name.PlaceholderText = "Enter the name";
             textBox_machine5_name.Size = new Size(100, 26);
             textBox_machine5_name.TabIndex = 1;
             // 
@@ -514,7 +544,8 @@
             // 
             textBox_machine4_ipv4.Location = new Point(124, 56);
             textBox_machine4_ipv4.Name = "textBox_machine4_ipv4";
-            textBox_machine4_ipv4.Size = new Size(100, 26);
+            textBox_machine4_ipv4.PlaceholderText = "Enter the IPv4 Address";
+            textBox_machine4_ipv4.Size = new Size(160, 26);
             textBox_machine4_ipv4.TabIndex = 3;
             // 
             // label12
@@ -530,6 +561,7 @@
             // 
             textBox_machine4_name.Location = new Point(74, 14);
             textBox_machine4_name.Name = "textBox_machine4_name";
+            textBox_machine4_name.PlaceholderText = "Enter the name";
             textBox_machine4_name.Size = new Size(100, 26);
             textBox_machine4_name.TabIndex = 1;
             // 
@@ -575,7 +607,8 @@
             // 
             textBox_machine3_ipv4.Location = new Point(124, 56);
             textBox_machine3_ipv4.Name = "textBox_machine3_ipv4";
-            textBox_machine3_ipv4.Size = new Size(100, 26);
+            textBox_machine3_ipv4.PlaceholderText = "Enter the IPv4 Address";
+            textBox_machine3_ipv4.Size = new Size(160, 26);
             textBox_machine3_ipv4.TabIndex = 3;
             // 
             // label9
@@ -591,6 +624,7 @@
             // 
             textBox_machine3_name.Location = new Point(74, 14);
             textBox_machine3_name.Name = "textBox_machine3_name";
+            textBox_machine3_name.PlaceholderText = "Enter the name";
             textBox_machine3_name.Size = new Size(100, 26);
             textBox_machine3_name.TabIndex = 1;
             // 
@@ -636,7 +670,8 @@
             // 
             textBox_machine2_ipv4.Location = new Point(124, 56);
             textBox_machine2_ipv4.Name = "textBox_machine2_ipv4";
-            textBox_machine2_ipv4.Size = new Size(100, 26);
+            textBox_machine2_ipv4.PlaceholderText = "Enter the IPv4 Address";
+            textBox_machine2_ipv4.Size = new Size(160, 26);
             textBox_machine2_ipv4.TabIndex = 3;
             // 
             // label6
@@ -652,6 +687,7 @@
             // 
             textBox_machine2_name.Location = new Point(74, 14);
             textBox_machine2_name.Name = "textBox_machine2_name";
+            textBox_machine2_name.PlaceholderText = "Enter the name";
             textBox_machine2_name.Size = new Size(100, 26);
             textBox_machine2_name.TabIndex = 1;
             // 
@@ -697,7 +733,8 @@
             // 
             textBox_machine1_ipv4.Location = new Point(124, 56);
             textBox_machine1_ipv4.Name = "textBox_machine1_ipv4";
-            textBox_machine1_ipv4.Size = new Size(100, 26);
+            textBox_machine1_ipv4.PlaceholderText = "Enter the IPv4 Address";
+            textBox_machine1_ipv4.Size = new Size(160, 26);
             textBox_machine1_ipv4.TabIndex = 3;
             // 
             // label3
@@ -713,7 +750,8 @@
             // 
             textBox_machine1_name.Location = new Point(74, 14);
             textBox_machine1_name.Name = "textBox_machine1_name";
-            textBox_machine1_name.Size = new Size(100, 26);
+            textBox_machine1_name.PlaceholderText = "Enter the name";
+            textBox_machine1_name.Size = new Size(121, 26);
             textBox_machine1_name.TabIndex = 1;
             // 
             // label2
@@ -755,7 +793,7 @@
             // 
             // button_exit_config
             // 
-            button_exit_config.Location = new Point(251, 772);
+            button_exit_config.Location = new Point(284, 762);
             button_exit_config.Name = "button_exit_config";
             button_exit_config.Size = new Size(160, 37);
             button_exit_config.TabIndex = 6;
@@ -764,12 +802,203 @@
             // 
             // button_exit_config_launch_main
             // 
-            button_exit_config_launch_main.Location = new Point(754, 767);
+            button_exit_config_launch_main.Location = new Point(741, 752);
             button_exit_config_launch_main.Name = "button_exit_config_launch_main";
             button_exit_config_launch_main.Size = new Size(177, 47);
             button_exit_config_launch_main.TabIndex = 7;
             button_exit_config_launch_main.Text = "Exit configuration and launch monitoring\r\n";
             button_exit_config_launch_main.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label44);
+            panel1.Controls.Add(label43);
+            panel1.Controls.Add(label42);
+            panel1.Controls.Add(label41);
+            panel1.Controls.Add(label40);
+            panel1.Controls.Add(textBox5);
+            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(checkBox2);
+            panel1.Controls.Add(checkBox1);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(label39);
+            panel1.Controls.Add(label38);
+            panel1.Controls.Add(label37);
+            panel1.Controls.Add(label36);
+            panel1.Controls.Add(label35);
+            panel1.Controls.Add(label34);
+            panel1.Location = new Point(-2, -2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1170, 597);
+            panel1.TabIndex = 16;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new Point(182, 89);
+            label34.Name = "label34";
+            label34.Size = new Size(88, 18);
+            label34.TabIndex = 0;
+            label34.Text = "SMTP Host :";
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Location = new Point(182, 157);
+            label35.Name = "label35";
+            label35.Size = new Size(42, 18);
+            label35.TabIndex = 1;
+            label35.Text = "Port :";
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Location = new Point(182, 236);
+            label36.Name = "label36";
+            label36.Size = new Size(101, 18);
+            label36.TabIndex = 2;
+            label36.Text = "Activate SSL :";
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.Location = new Point(182, 291);
+            label37.Name = "label37";
+            label37.Size = new Size(153, 18);
+            label37.TabIndex = 3;
+            label37.Text = "Sender mail address :";
+            // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.Location = new Point(182, 375);
+            label38.Name = "label38";
+            label38.Size = new Size(82, 18);
+            label38.TabIndex = 4;
+            label38.Text = "Password :";
+            // 
+            // label39
+            // 
+            label39.AutoSize = true;
+            label39.Location = new Point(182, 452);
+            label39.Name = "label39";
+            label39.Size = new Size(166, 18);
+            label39.TabIndex = 5;
+            label39.Text = "Receiver Mail Address :";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(274, 86);
+            textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Enter the SMTP host";
+            textBox1.Size = new Size(153, 26);
+            textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(230, 154);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "Enter the port";
+            textBox2.Size = new Size(100, 26);
+            textBox2.TabIndex = 7;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(298, 235);
+            checkBox1.Name = "checkBox1";
+            checkBox1.RightToLeft = RightToLeft.Yes;
+            checkBox1.Size = new Size(50, 22);
+            checkBox1.TabIndex = 8;
+            checkBox1.Text = "Yes";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(379, 235);
+            checkBox2.Name = "checkBox2";
+            checkBox2.RightToLeft = RightToLeft.Yes;
+            checkBox2.Size = new Size(46, 22);
+            checkBox2.TabIndex = 9;
+            checkBox2.Text = "No\r\n";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(341, 288);
+            textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "Enter the mail";
+            textBox3.Size = new Size(153, 26);
+            textBox3.TabIndex = 10;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(270, 372);
+            textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = "Enter the password";
+            textBox4.Size = new Size(142, 26);
+            textBox4.TabIndex = 11;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(349, 449);
+            textBox5.Name = "textBox5";
+            textBox5.PlaceholderText = "Enter the mail";
+            textBox5.Size = new Size(145, 26);
+            textBox5.TabIndex = 12;
+            // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label40.Location = new Point(182, 478);
+            label40.Name = "label40";
+            label40.Size = new Size(285, 20);
+            label40.TabIndex = 13;
+            label40.Text = "The mail that will receive the notifications";
+            // 
+            // label41
+            // 
+            label41.AutoSize = true;
+            label41.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label41.Location = new Point(182, 401);
+            label41.Name = "label41";
+            label41.Size = new Size(355, 20);
+            label41.TabIndex = 14;
+            label41.Text = "The password of the account linked to the smtp host";
+            // 
+            // label42
+            // 
+            label42.AutoSize = true;
+            label42.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label42.Location = new Point(182, 317);
+            label42.Name = "label42";
+            label42.Size = new Size(309, 20);
+            label42.TabIndex = 15;
+            label42.Text = "The mail from which notifications will be sent\r\n";
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label43.Location = new Point(182, 183);
+            label43.Name = "label43";
+            label43.Size = new Size(326, 20);
+            label43.TabIndex = 16;
+            label43.Text = "The port from which the smtp will communicate";
+            // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label44.Location = new Point(182, 114);
+            label44.Name = "label44";
+            label44.Size = new Size(291, 20);
+            label44.TabIndex = 17;
+            label44.Text = "The smtp of the host that will sent the mail";
             // 
             // configForm
             // 
@@ -815,6 +1044,8 @@
             panel_machine_1.ResumeLayout(false);
             panel_machine_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine1_interval).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -893,5 +1124,24 @@
         private Button button_reset;
         private Button button_exit_config;
         private Button button_exit_config_launch_main;
+        private Panel panel1;
+        private Label label35;
+        private Label label34;
+        private CheckBox checkBox1;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Label label39;
+        private Label label38;
+        private Label label37;
+        private Label label36;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private CheckBox checkBox2;
+        private Label label40;
+        private Label label42;
+        private Label label41;
+        private Label label43;
+        private Label label44;
     }
 }
