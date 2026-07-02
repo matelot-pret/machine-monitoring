@@ -39,49 +39,49 @@
             label28 = new Label();
             label27 = new Label();
             label26 = new Label();
-            panel7 = new Panel();
+            panel_machine_8 = new Panel();
             numericUpDown_machine8_interval = new NumericUpDown();
             label23 = new Label();
             textBox_machine8_ipv4 = new TextBox();
             label24 = new Label();
             textBox_machine8_name = new TextBox();
             label25 = new Label();
-            panel6 = new Panel();
+            panel_machine_7 = new Panel();
             numericUpDown_machine7_interval = new NumericUpDown();
             label20 = new Label();
             textBox_machine7_ipv4 = new TextBox();
             label21 = new Label();
             textBox_machine7_name = new TextBox();
             label22 = new Label();
-            panel5 = new Panel();
+            panel_machine_6 = new Panel();
             numericUnumericUpDown_machine6_interval = new NumericUpDown();
             label17 = new Label();
             textBox_machine6_ipv4 = new TextBox();
             label18 = new Label();
             textBox_machine6_name = new TextBox();
             label19 = new Label();
-            panel4 = new Panel();
+            panel_machine_5 = new Panel();
             numericUpDnumericUpDown_machine5_intervalown4 = new NumericUpDown();
             label14 = new Label();
             textBox_machine5_ipv4 = new TextBox();
             label15 = new Label();
             textBox_machine5_name = new TextBox();
             label16 = new Label();
-            panel3 = new Panel();
+            panel_machine_4 = new Panel();
             numericUpDown_machine4_interval = new NumericUpDown();
             label11 = new Label();
             textBox_machine4_ipv4 = new TextBox();
             label12 = new Label();
             textBox_machine4_name = new TextBox();
             label13 = new Label();
-            panel2 = new Panel();
+            panel_machine_3 = new Panel();
             numericUpDown_machine3_interval = new NumericUpDown();
             label8 = new Label();
             textBox_machine3_ipv4 = new TextBox();
             label9 = new Label();
             textBox_machine3_name = new TextBox();
             label10 = new Label();
-            panel1 = new Panel();
+            panel_machine_2 = new Panel();
             numericUpDown_machine2_interval = new NumericUpDown();
             label5 = new Label();
             textBox_machine2_ipv4 = new TextBox();
@@ -98,23 +98,22 @@
             label1 = new Label();
             label_last_change_time = new Label();
             button_reset = new Button();
-            button1 = new Button();
             button_exit_config = new Button();
             button_exit_config_launch_main = new Button();
             panel_manage_machine.SuspendLayout();
-            panel7.SuspendLayout();
+            panel_machine_8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine8_interval).BeginInit();
-            panel6.SuspendLayout();
+            panel_machine_7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine7_interval).BeginInit();
-            panel5.SuspendLayout();
+            panel_machine_6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUnumericUpDown_machine6_interval).BeginInit();
-            panel4.SuspendLayout();
+            panel_machine_5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDnumericUpDown_machine5_intervalown4).BeginInit();
-            panel3.SuspendLayout();
+            panel_machine_4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine4_interval).BeginInit();
-            panel2.SuspendLayout();
+            panel_machine_3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine3_interval).BeginInit();
-            panel1.SuspendLayout();
+            panel_machine_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine2_interval).BeginInit();
             panel_machine_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine1_interval).BeginInit();
@@ -152,13 +151,13 @@
             panel_manage_machine.Controls.Add(label28);
             panel_manage_machine.Controls.Add(label27);
             panel_manage_machine.Controls.Add(label26);
-            panel_manage_machine.Controls.Add(panel7);
-            panel_manage_machine.Controls.Add(panel6);
-            panel_manage_machine.Controls.Add(panel5);
-            panel_manage_machine.Controls.Add(panel4);
-            panel_manage_machine.Controls.Add(panel3);
-            panel_manage_machine.Controls.Add(panel2);
-            panel_manage_machine.Controls.Add(panel1);
+            panel_manage_machine.Controls.Add(panel_machine_8);
+            panel_manage_machine.Controls.Add(panel_machine_7);
+            panel_manage_machine.Controls.Add(panel_machine_6);
+            panel_manage_machine.Controls.Add(panel_machine_5);
+            panel_manage_machine.Controls.Add(panel_machine_4);
+            panel_manage_machine.Controls.Add(panel_machine_3);
+            panel_manage_machine.Controls.Add(panel_machine_2);
             panel_manage_machine.Controls.Add(panel_machine_1);
             panel_manage_machine.Controls.Add(label1);
             panel_manage_machine.Location = new Point(12, 122);
@@ -238,18 +237,18 @@
             label26.TabIndex = 8;
             label26.Text = "Machine 1";
             // 
-            // panel7
+            // panel_machine_8
             // 
-            panel7.Controls.Add(numericUpDown_machine8_interval);
-            panel7.Controls.Add(label23);
-            panel7.Controls.Add(textBox_machine8_ipv4);
-            panel7.Controls.Add(label24);
-            panel7.Controls.Add(textBox_machine8_name);
-            panel7.Controls.Add(label25);
-            panel7.Location = new Point(375, 427);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(305, 146);
-            panel7.TabIndex = 7;
+            panel_machine_8.Controls.Add(numericUpDown_machine8_interval);
+            panel_machine_8.Controls.Add(label23);
+            panel_machine_8.Controls.Add(textBox_machine8_ipv4);
+            panel_machine_8.Controls.Add(label24);
+            panel_machine_8.Controls.Add(textBox_machine8_name);
+            panel_machine_8.Controls.Add(label25);
+            panel_machine_8.Location = new Point(375, 427);
+            panel_machine_8.Name = "panel_machine_8";
+            panel_machine_8.Size = new Size(305, 146);
+            panel_machine_8.TabIndex = 7;
             // 
             // numericUpDown_machine8_interval
             // 
@@ -299,18 +298,18 @@
             label25.TabIndex = 0;
             label25.Text = "Name :";
             // 
-            // panel6
+            // panel_machine_7
             // 
-            panel6.Controls.Add(numericUpDown_machine7_interval);
-            panel6.Controls.Add(label20);
-            panel6.Controls.Add(textBox_machine7_ipv4);
-            panel6.Controls.Add(label21);
-            panel6.Controls.Add(textBox_machine7_name);
-            panel6.Controls.Add(label22);
-            panel6.Location = new Point(31, 427);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(305, 146);
-            panel6.TabIndex = 6;
+            panel_machine_7.Controls.Add(numericUpDown_machine7_interval);
+            panel_machine_7.Controls.Add(label20);
+            panel_machine_7.Controls.Add(textBox_machine7_ipv4);
+            panel_machine_7.Controls.Add(label21);
+            panel_machine_7.Controls.Add(textBox_machine7_name);
+            panel_machine_7.Controls.Add(label22);
+            panel_machine_7.Location = new Point(31, 427);
+            panel_machine_7.Name = "panel_machine_7";
+            panel_machine_7.Size = new Size(305, 146);
+            panel_machine_7.TabIndex = 6;
             // 
             // numericUpDown_machine7_interval
             // 
@@ -360,18 +359,18 @@
             label22.TabIndex = 0;
             label22.Text = "Name :";
             // 
-            // panel5
+            // panel_machine_6
             // 
-            panel5.Controls.Add(numericUnumericUpDown_machine6_interval);
-            panel5.Controls.Add(label17);
-            panel5.Controls.Add(textBox_machine6_ipv4);
-            panel5.Controls.Add(label18);
-            panel5.Controls.Add(textBox_machine6_name);
-            panel5.Controls.Add(label19);
-            panel5.Location = new Point(729, 252);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(305, 146);
-            panel5.TabIndex = 6;
+            panel_machine_6.Controls.Add(numericUnumericUpDown_machine6_interval);
+            panel_machine_6.Controls.Add(label17);
+            panel_machine_6.Controls.Add(textBox_machine6_ipv4);
+            panel_machine_6.Controls.Add(label18);
+            panel_machine_6.Controls.Add(textBox_machine6_name);
+            panel_machine_6.Controls.Add(label19);
+            panel_machine_6.Location = new Point(729, 252);
+            panel_machine_6.Name = "panel_machine_6";
+            panel_machine_6.Size = new Size(305, 146);
+            panel_machine_6.TabIndex = 6;
             // 
             // numericUnumericUpDown_machine6_interval
             // 
@@ -421,18 +420,18 @@
             label19.TabIndex = 0;
             label19.Text = "Name :";
             // 
-            // panel4
+            // panel_machine_5
             // 
-            panel4.Controls.Add(numericUpDnumericUpDown_machine5_intervalown4);
-            panel4.Controls.Add(label14);
-            panel4.Controls.Add(textBox_machine5_ipv4);
-            panel4.Controls.Add(label15);
-            panel4.Controls.Add(textBox_machine5_name);
-            panel4.Controls.Add(label16);
-            panel4.Location = new Point(375, 252);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(305, 146);
-            panel4.TabIndex = 6;
+            panel_machine_5.Controls.Add(numericUpDnumericUpDown_machine5_intervalown4);
+            panel_machine_5.Controls.Add(label14);
+            panel_machine_5.Controls.Add(textBox_machine5_ipv4);
+            panel_machine_5.Controls.Add(label15);
+            panel_machine_5.Controls.Add(textBox_machine5_name);
+            panel_machine_5.Controls.Add(label16);
+            panel_machine_5.Location = new Point(375, 252);
+            panel_machine_5.Name = "panel_machine_5";
+            panel_machine_5.Size = new Size(305, 146);
+            panel_machine_5.TabIndex = 6;
             // 
             // numericUpDnumericUpDown_machine5_intervalown4
             // 
@@ -482,18 +481,18 @@
             label16.TabIndex = 0;
             label16.Text = "Name :";
             // 
-            // panel3
+            // panel_machine_4
             // 
-            panel3.Controls.Add(numericUpDown_machine4_interval);
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(textBox_machine4_ipv4);
-            panel3.Controls.Add(label12);
-            panel3.Controls.Add(textBox_machine4_name);
-            panel3.Controls.Add(label13);
-            panel3.Location = new Point(31, 252);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(305, 146);
-            panel3.TabIndex = 6;
+            panel_machine_4.Controls.Add(numericUpDown_machine4_interval);
+            panel_machine_4.Controls.Add(label11);
+            panel_machine_4.Controls.Add(textBox_machine4_ipv4);
+            panel_machine_4.Controls.Add(label12);
+            panel_machine_4.Controls.Add(textBox_machine4_name);
+            panel_machine_4.Controls.Add(label13);
+            panel_machine_4.Location = new Point(31, 252);
+            panel_machine_4.Name = "panel_machine_4";
+            panel_machine_4.Size = new Size(305, 146);
+            panel_machine_4.TabIndex = 6;
             // 
             // numericUpDown_machine4_interval
             // 
@@ -543,18 +542,18 @@
             label13.TabIndex = 0;
             label13.Text = "Name :";
             // 
-            // panel2
+            // panel_machine_3
             // 
-            panel2.Controls.Add(numericUpDown_machine3_interval);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(textBox_machine3_ipv4);
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(textBox_machine3_name);
-            panel2.Controls.Add(label10);
-            panel2.Location = new Point(729, 82);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(305, 146);
-            panel2.TabIndex = 6;
+            panel_machine_3.Controls.Add(numericUpDown_machine3_interval);
+            panel_machine_3.Controls.Add(label8);
+            panel_machine_3.Controls.Add(textBox_machine3_ipv4);
+            panel_machine_3.Controls.Add(label9);
+            panel_machine_3.Controls.Add(textBox_machine3_name);
+            panel_machine_3.Controls.Add(label10);
+            panel_machine_3.Location = new Point(729, 82);
+            panel_machine_3.Name = "panel_machine_3";
+            panel_machine_3.Size = new Size(305, 146);
+            panel_machine_3.TabIndex = 6;
             // 
             // numericUpDown_machine3_interval
             // 
@@ -604,18 +603,18 @@
             label10.TabIndex = 0;
             label10.Text = "Name :";
             // 
-            // panel1
+            // panel_machine_2
             // 
-            panel1.Controls.Add(numericUpDown_machine2_interval);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(textBox_machine2_ipv4);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(textBox_machine2_name);
-            panel1.Controls.Add(label7);
-            panel1.Location = new Point(375, 82);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(305, 146);
-            panel1.TabIndex = 6;
+            panel_machine_2.Controls.Add(numericUpDown_machine2_interval);
+            panel_machine_2.Controls.Add(label5);
+            panel_machine_2.Controls.Add(textBox_machine2_ipv4);
+            panel_machine_2.Controls.Add(label6);
+            panel_machine_2.Controls.Add(textBox_machine2_name);
+            panel_machine_2.Controls.Add(label7);
+            panel_machine_2.Location = new Point(375, 82);
+            panel_machine_2.Name = "panel_machine_2";
+            panel_machine_2.Size = new Size(305, 146);
+            panel_machine_2.TabIndex = 6;
             // 
             // numericUpDown_machine2_interval
             // 
@@ -754,15 +753,6 @@
             button_reset.Text = "Reset configuration\r\n";
             button_reset.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            button1.Location = new Point(517, 397);
-            button1.Name = "button1";
-            button1.Size = new Size(160, 37);
-            button1.TabIndex = 5;
-            button1.Text = "Reset configuration\r\n";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // button_exit_config
             // 
             button_exit_config.Location = new Point(251, 772);
@@ -790,7 +780,6 @@
             ClientSize = new Size(1194, 831);
             Controls.Add(button_exit_config_launch_main);
             Controls.Add(button_exit_config);
-            Controls.Add(button1);
             Controls.Add(button_reset);
             Controls.Add(label_last_change_time);
             Controls.Add(panel_manage_machine);
@@ -802,26 +791,26 @@
             Text = "Configuration";
             panel_manage_machine.ResumeLayout(false);
             panel_manage_machine.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
+            panel_machine_8.ResumeLayout(false);
+            panel_machine_8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine8_interval).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
+            panel_machine_7.ResumeLayout(false);
+            panel_machine_7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine7_interval).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            panel_machine_6.ResumeLayout(false);
+            panel_machine_6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUnumericUpDown_machine6_interval).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            panel_machine_5.ResumeLayout(false);
+            panel_machine_5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDnumericUpDown_machine5_intervalown4).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            panel_machine_4.ResumeLayout(false);
+            panel_machine_4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine4_interval).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panel_machine_3.ResumeLayout(false);
+            panel_machine_3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine3_interval).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel_machine_2.ResumeLayout(false);
+            panel_machine_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_machine2_interval).EndInit();
             panel_machine_1.ResumeLayout(false);
             panel_machine_1.PerformLayout();
@@ -844,49 +833,49 @@
         private TextBox textBox_machine1_ipv4;
         private Label label3;
         private NumericUpDown numericUpDown_machine1_interval;
-        private Panel panel7;
+        private Panel panel_machine_8;
         private NumericUpDown numericUpDown_machine8_interval;
         private Label label23;
         private TextBox textBox_machine8_ipv4;
         private Label label24;
         private TextBox textBox_machine8_name;
         private Label label25;
-        private Panel panel6;
+        private Panel panel_machine_7;
         private NumericUpDown numericUpDown_machine7_interval;
         private Label label20;
         private TextBox textBox_machine7_ipv4;
         private Label label21;
         private TextBox textBox_machine7_name;
         private Label label22;
-        private Panel panel5;
+        private Panel panel_machine_6;
         private NumericUpDown numericUnumericUpDown_machine6_interval;
         private Label label17;
         private TextBox textBox_machine6_ipv4;
         private Label label18;
         private TextBox textBox_machine6_name;
         private Label label19;
-        private Panel panel4;
+        private Panel panel_machine_5;
         private NumericUpDown numericUpDnumericUpDown_machine5_intervalown4;
         private Label label14;
         private TextBox textBox_machine5_ipv4;
         private Label label15;
         private TextBox textBox_machine5_name;
         private Label label16;
-        private Panel panel3;
+        private Panel panel_machine_4;
         private NumericUpDown numericUpDown_machine4_interval;
         private Label label11;
         private TextBox textBox_machine4_ipv4;
         private Label label12;
         private TextBox textBox_machine4_name;
         private Label label13;
-        private Panel panel2;
+        private Panel panel_machine_3;
         private NumericUpDown numericUpDown_machine3_interval;
         private Label label8;
         private TextBox textBox_machine3_ipv4;
         private Label label9;
         private TextBox textBox_machine3_name;
         private Label label10;
-        private Panel panel1;
+        private Panel panel_machine_2;
         private NumericUpDown numericUpDown_machine2_interval;
         private Label label5;
         private TextBox textBox_machine2_ipv4;
@@ -902,7 +891,6 @@
         private Label label27;
         private Label label26;
         private Button button_reset;
-        private Button button1;
         private Button button_exit_config;
         private Button button_exit_config_launch_main;
     }
