@@ -115,7 +115,6 @@
             label34 = new Label();
             label_last_change_time = new Label();
             button_reset = new Button();
-            button_exit_config = new Button();
             button_exit_config_launch_main = new Button();
             panel_manage_machine.SuspendLayout();
             panel_machine_8.SuspendLayout();
@@ -961,21 +960,13 @@
             // 
             // button_reset
             // 
-            button_reset.Location = new Point(502, 725);
+            button_reset.Location = new Point(298, 757);
             button_reset.Name = "button_reset";
             button_reset.Size = new Size(160, 37);
             button_reset.TabIndex = 4;
             button_reset.Text = "Reset configuration\r\n";
             button_reset.UseVisualStyleBackColor = true;
-            // 
-            // button_exit_config
-            // 
-            button_exit_config.Location = new Point(284, 762);
-            button_exit_config.Name = "button_exit_config";
-            button_exit_config.Size = new Size(160, 37);
-            button_exit_config.TabIndex = 6;
-            button_exit_config.Text = "Exit configuration\r\n";
-            button_exit_config.UseVisualStyleBackColor = true;
+            button_reset.Click += button_reset_Click;
             // 
             // button_exit_config_launch_main
             // 
@@ -985,6 +976,7 @@
             button_exit_config_launch_main.TabIndex = 7;
             button_exit_config_launch_main.Text = "Exit configuration and launch monitoring\r\n";
             button_exit_config_launch_main.UseVisualStyleBackColor = true;
+            button_exit_config_launch_main.Click += button_exit_config_launch_main_Click;
             // 
             // configForm
             // 
@@ -996,7 +988,6 @@
             ClientSize = new Size(1194, 831);
             Controls.Add(panel_manage_config);
             Controls.Add(button_exit_config_launch_main);
-            Controls.Add(button_exit_config);
             Controls.Add(button_reset);
             Controls.Add(label_last_change_time);
             Controls.Add(panel_manage_machine);
@@ -1006,6 +997,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "configForm";
             Text = "Configuration";
+            FormClosing += configForm_FormClosing;
             panel_manage_machine.ResumeLayout(false);
             panel_manage_machine.PerformLayout();
             panel_machine_8.ResumeLayout(false);
@@ -1110,7 +1102,6 @@
         private Label label27;
         private Label label26;
         private Button button_reset;
-        private Button button_exit_config;
         private Button button_exit_config_launch_main;
         private Panel panel_manage_config;
         private Label label35;
