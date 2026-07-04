@@ -8,6 +8,7 @@ namespace configApp
     {
         private SMTPConfig configSmtp;
         private List<MachineConfig> configMachine;
+        private DateTime lastChangeTime;
 
         public Config()
         {
@@ -15,6 +16,25 @@ namespace configApp
             configMachine = new List<MachineConfig>();
         }
 
+        public DateTime changeTime
+        {
+            get { return lastChangeTime; }
+            set { if (value != null) lastChangeTime = value; }
+        }
+
+        public bool isMachineValid(MachineConfig machine)
+        {
+            return machine.IsPingRequestIntervalValid() 
+                && machine.IsNameEmpty() && machine.IsIpv4AddressValid();
+        }
+
+        public void AddMachine (MachineConfig machine)
+        {
+            if (isMachineValid(machine))
+            {
+                configMachine.Add(machine);
+            }
+        }
 
     }
 }

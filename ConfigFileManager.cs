@@ -10,18 +10,17 @@ namespace configApp
     {
         private string filePath;
         private Config config;
-        private DateTime lastChangeTime;
-
-        public string pathFile
-        {
-            get { return filePath; }
-            //no need to be change by another object
-        }
 
         public ConfigFileManager()
         {
             filePath = GetConfigFilePath();
             config = new Config();
+        }
+
+        public string pathFile
+        {
+            get { return filePath; }
+            //no need to be change by another object
         }
 
         public string GetRootPath()
@@ -48,6 +47,7 @@ namespace configApp
         {
             if (IsConfigFileExists())
             {
+                config.changeTime = DateTime.Now;
                 string json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(filePath, json);
             }

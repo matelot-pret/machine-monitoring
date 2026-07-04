@@ -8,17 +8,13 @@ namespace configApp
         public configForm()
         {
             InitializeComponent();
-            panelManager = new PanelManager(panel_manage_machine, panel_manage_config);
+            panelManager = new PanelManager(flowLayoutPanel, panel_manage_config);
             appManager = new ConfigAppManager();
         }
 
         private void button_manage_machine_Click(object sender, EventArgs e)
         {
-            if (appManager.fileConfig.IsConfigFileExists())
-            {
-                MessageBox.Show(appManager.fileConfig.pathFile);
-            }
-            panelManager.Show(panel_manage_machine);
+            panelManager.Show(flowLayoutPanel);
         }
 
         private void button_manage_notification_Click(object sender, EventArgs e)
@@ -40,6 +36,11 @@ namespace configApp
         private void configForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             appManager.fileConfig.SaveConfigToJsonFile();
+        }
+
+        private void buttonAddMachine_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

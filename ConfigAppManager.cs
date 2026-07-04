@@ -20,11 +20,6 @@ namespace configApp
             configFile = new ConfigFileManager();
         }
 
-        public DateTime GetLastChangeTime()
-        {
-            return DateTime.Now;
-        }
-
         private void ExitConfig()
         {
             Application.Exit();

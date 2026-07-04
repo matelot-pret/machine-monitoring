@@ -4,5 +4,8 @@
     <Compile Update="configForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MachineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
