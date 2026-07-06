@@ -15,6 +15,22 @@ namespace configApp
         {
             filePath = GetConfigFilePath();
             config = new Config();
+            LoadConfig();
+
+        }
+
+        public void LoadConfig()
+        {
+            if (IsConfigFileExists())
+            {
+                string json = File.ReadAllText(filePath);
+                config = JsonSerializer.Deserialize<Config>(json) ?? new Config();
+            }
+        }
+
+        public Config Configuration {
+            get { return config; }
+            set { config = value; }
         }
 
         public string pathFile
@@ -45,17 +61,10 @@ namespace configApp
 
         public void SaveConfigToJsonFile()
         {
-            if (IsConfigFileExists())
-            {
-                config.changeTime = DateTime.Now;
-                string json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(filePath, json);
-            }
-            else
-            {
-                CreateConfigFile();
-            }
-            
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath));//create the directory if no exists
+
+            string json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(filePath, json);
         }
 
         public void DeleteConfigFile()
@@ -69,11 +78,6 @@ namespace configApp
         public bool IsConfigFileExists()
         {
             return File.Exists(filePath);
-        }
-
-        public void CreateConfigFile()
-        {
-            File.Create(filePath);
         }
 
     }

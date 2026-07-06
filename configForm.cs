@@ -2,19 +2,34 @@ namespace configApp
 {
     public partial class configForm : Form
     {
-        PanelManager panelManager;
-        ConfigAppManager appManager;
+        private PanelManager panelManager;
+        private ConfigAppManager appManager;
+        private MachineScreen machineScreen;
+        private bool isLoading = false;
 
         public configForm()
         {
             InitializeComponent();
-            panelManager = new PanelManager(flowLayoutPanel, panel_manage_config);
+
             appManager = new ConfigAppManager();
+            machineScreen = machineScreen1;
+            machineScreen.Initialize(appManager.fileConfig.Configuration);
+            machineScreen.MachineModified += OnMachineModified;
+            isLoading = true;
+            machineScreen.LoadMachines();
+            isLoading = false;
+
+            panelManager = new PanelManager(machineScreen, panel_manage_config);
+
+            if (appManager.fileConfig.IsConfigFileExists())
+            {
+                labelLastChangeTime.Text = appManager.LastChangeInfo();
+            }
         }
 
         private void button_manage_machine_Click(object sender, EventArgs e)
         {
-            panelManager.Show(flowLayoutPanel);
+            panelManager.Show(machineScreen);
         }
 
         private void button_manage_notification_Click(object sender, EventArgs e)
@@ -24,7 +39,8 @@ namespace configApp
 
         private void button_reset_Click(object sender, EventArgs e)
         {
-            appManager.fileConfig.DeleteConfigFile();
+            appManager.ResetConfig();
+            machineScreen.ClearMachines();
         }
 
         private void button_exit_config_launch_main_Click(object sender, EventArgs e)
@@ -38,9 +54,15 @@ namespace configApp
             appManager.fileConfig.SaveConfigToJsonFile();
         }
 
-        private void buttonAddMachine_Click(object sender, EventArgs e)
+        private void OnMachineModified(object? sender, EventArgs e)
         {
-
+            if (isLoading)
+            {
+                return;
+            }
+            appManager.UpdateLastChangeTime();
+            labelLastChangeTime.Text = appManager.LastChangeInfo();
         }
+
     }
 }

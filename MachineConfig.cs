@@ -17,13 +17,13 @@ namespace configApp
         public String Name
         {
             get { return name; }
-            set { if (!String.IsNullOrWhiteSpace(value)) name = value; }
+            set { name = value; }
         }
 
         public String Ipv4Address
         {
             get { return ipv4Address; }
-            set { if (!String.IsNullOrWhiteSpace(value)) ipv4Address = value; }
+            set { ipv4Address = value; }
         }
 
         public int PingRequestInterval
@@ -32,14 +32,14 @@ namespace configApp
             set { if (value > 0) pingRequestInterval = value; }
         }
 
-        public bool IsNameEmpty()
+        public bool IsNameValid(string candidate)
         {
-            return String.IsNullOrWhiteSpace(name);
+            return !String.IsNullOrWhiteSpace(candidate);
         }
 
-        public bool IsIpv4AddressValid()
+        public bool IsIpv4AddressValid(string candidate)
         {
-            return IPAddress.TryParse(ipv4Address, out IPAddress addr) 
+            return IPAddress.TryParse(candidate, out IPAddress addr)
                 && addr.AddressFamily == AddressFamily.InterNetwork;
         }
 

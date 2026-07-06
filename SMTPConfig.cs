@@ -36,13 +36,13 @@ namespace configApp
         public String SenderMail
         {
             get { return senderMail; }
-            set { if (!String.IsNullOrWhiteSpace(value)) senderMail = value; }
+            set { senderMail = value; }
         }
 
         public String ReceiverMail
         {
-            get { return senderMail; }
-            set { if (!String.IsNullOrWhiteSpace(value)) receiverMail = value; }
+            get { return receiverMail; }
+            set { receiverMail = value; }
         }
 
         public bool IsSSLOn

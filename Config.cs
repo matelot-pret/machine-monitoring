@@ -7,34 +7,48 @@ namespace configApp
     public class Config
     {
         private SMTPConfig configSmtp;
-        private List<MachineConfig> configMachine;
+        private List<MachineConfig> configMachines;
         private DateTime lastChangeTime;
 
         public Config()
         {
             configSmtp = new SMTPConfig();
-            configMachine = new List<MachineConfig>();
+            configMachines = new List<MachineConfig>();
+        }
+
+        public List<MachineConfig> Machines
+        {
+            get { return configMachines; }
+            set { configMachines = value; }
+        }
+
+        public SMTPConfig Smtp
+        {
+            get { return configSmtp; }
+            set { configSmtp = value; }
         }
 
         public DateTime changeTime
         {
             get { return lastChangeTime; }
-            set { if (value != null) lastChangeTime = value; }
-        }
-
-        public bool isMachineValid(MachineConfig machine)
-        {
-            return machine.IsPingRequestIntervalValid() 
-                && machine.IsNameEmpty() && machine.IsIpv4AddressValid();
+            set { lastChangeTime = value; }
         }
 
         public void AddMachine (MachineConfig machine)
         {
-            if (isMachineValid(machine))
-            {
-                configMachine.Add(machine);
-            }
+                configMachines.Add(machine); 
         }
 
+        public void DeleteMachine(MachineConfig bloc)
+        {
+            configMachines.Remove(bloc);
+        }
+
+        public void Clear()
+        {
+            configMachines.Clear();
+            configSmtp = new SMTPConfig();
+            lastChangeTime = DateTime.Now;
+        }
     }
 }

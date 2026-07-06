@@ -6,16 +6,16 @@ namespace configApp
 {
     public class PanelManager
     {
-        private List<Panel> listPanels;
+        private List<Control> listPanels;
 
 
         /*
          * constructor takes a list of panels, can also take one panel*/
-        public PanelManager(params Panel[] list)
+        public PanelManager(params Control[] list)
         {
-            listPanels = new List<Panel>(list);
+            listPanels = new List<Control>(list);
 
-            foreach(Panel panel in list)
+            foreach(Control panel in list)
             {
                 panel.Visible = false;
             }
@@ -27,9 +27,9 @@ namespace configApp
          * param panel : the panel to hide 
          * the panel object mustn't be null
          */
-        public void Show(Panel panel)
+        public void Show(Control panel)
         {
-            foreach (Panel p in listPanels)
+            foreach (Control p in listPanels)
             {
                 p.Visible = false;
             }

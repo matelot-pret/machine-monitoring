@@ -30,7 +30,6 @@
         {
             button_manage_machine = new Button();
             button_manage_notification = new Button();
-            label1 = new Label();
             panel_manage_config = new Panel();
             label44 = new Label();
             label43 = new Label();
@@ -48,21 +47,17 @@
             label37 = new Label();
             label35 = new Label();
             label34 = new Label();
-            flowLayoutPanel = new FlowLayoutPanel();
-            panel1 = new Panel();
-            buttonAddMachine = new Button();
-            label_last_change_time = new Label();
+            machineScreen1 = new MachineScreen();
+            labelLastChangeTime = new Label();
             button_reset = new Button();
             button_exit_config_launch_main = new Button();
             panel_manage_config.SuspendLayout();
-            flowLayoutPanel.SuspendLayout();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // button_manage_machine
             // 
             button_manage_machine.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_manage_machine.Location = new Point(275, 13);
+            button_manage_machine.Location = new Point(273, 25);
             button_manage_machine.Margin = new Padding(3, 4, 3, 4);
             button_manage_machine.Name = "button_manage_machine";
             button_manage_machine.Size = new Size(153, 44);
@@ -74,7 +69,7 @@
             // button_manage_notification
             // 
             button_manage_notification.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_manage_notification.Location = new Point(741, 13);
+            button_manage_notification.Location = new Point(741, 25);
             button_manage_notification.Margin = new Padding(3, 4, 3, 4);
             button_manage_notification.Name = "button_manage_notification";
             button_manage_notification.Size = new Size(159, 44);
@@ -82,16 +77,6 @@
             button_manage_notification.Text = "Manage Notification configuration";
             button_manage_notification.UseVisualStyleBackColor = true;
             button_manage_notification.Click += button_manage_notification_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(475, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Machine to monitor. The maximum number of machine to monitor is 8\r\n";
             // 
             // panel_manage_config
             // 
@@ -112,9 +97,9 @@
             panel_manage_config.Controls.Add(label37);
             panel_manage_config.Controls.Add(label35);
             panel_manage_config.Controls.Add(label34);
-            panel_manage_config.Location = new Point(14, 134);
+            panel_manage_config.Location = new Point(12, 120);
             panel_manage_config.Name = "panel_manage_config";
-            panel_manage_config.Size = new Size(1163, 597);
+            panel_manage_config.Size = new Size(1146, 610);
             panel_manage_config.TabIndex = 1;
             // 
             // label44
@@ -263,41 +248,24 @@
             label34.TabIndex = 0;
             label34.Text = "SMTP Host :";
             // 
-            // flowLayoutPanel
+            // machineScreen1
             // 
-            flowLayoutPanel.Controls.Add(panel1);
-            flowLayoutPanel.Location = new Point(12, 134);
-            flowLayoutPanel.Name = "flowLayoutPanel";
-            flowLayoutPanel.Size = new Size(1165, 597);
-            flowLayoutPanel.TabIndex = 8;
+            machineScreen1.AutoScroll = true;
+            machineScreen1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            machineScreen1.BorderStyle = BorderStyle.Fixed3D;
+            machineScreen1.Location = new Point(12, 120);
+            machineScreen1.Margin = new Padding(3, 2, 3, 2);
+            machineScreen1.Name = "machineScreen1";
+            machineScreen1.Size = new Size(1146, 610);
+            machineScreen1.TabIndex = 8;
             // 
-            // panel1
+            // labelLastChangeTime
             // 
-            panel1.Controls.Add(buttonAddMachine);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1155, 79);
-            panel1.TabIndex = 18;
-            // 
-            // buttonAddMachine
-            // 
-            buttonAddMachine.Location = new Point(724, 12);
-            buttonAddMachine.Name = "buttonAddMachine";
-            buttonAddMachine.Size = new Size(129, 47);
-            buttonAddMachine.TabIndex = 0;
-            buttonAddMachine.Text = "+ add a machine configuration";
-            buttonAddMachine.UseVisualStyleBackColor = true;
-            buttonAddMachine.Click += buttonAddMachine_Click;
-            // 
-            // label_last_change_time
-            // 
-            label_last_change_time.AutoSize = true;
-            label_last_change_time.Location = new Point(741, 72);
-            label_last_change_time.Name = "label_last_change_time";
-            label_last_change_time.Size = new Size(45, 18);
-            label_last_change_time.TabIndex = 3;
-            label_last_change_time.Text = "Label";
+            labelLastChangeTime.AutoSize = true;
+            labelLastChangeTime.Location = new Point(741, 80);
+            labelLastChangeTime.Name = "labelLastChangeTime";
+            labelLastChangeTime.Size = new Size(0, 18);
+            labelLastChangeTime.TabIndex = 3;
             // 
             // button_reset
             // 
@@ -326,14 +294,14 @@
             AutoScroll = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1194, 831);
-            Controls.Add(flowLayoutPanel);
-            Controls.Add(panel_manage_config);
+            ClientSize = new Size(1194, 808);
             Controls.Add(button_exit_config_launch_main);
             Controls.Add(button_reset);
-            Controls.Add(label_last_change_time);
+            Controls.Add(labelLastChangeTime);
             Controls.Add(button_manage_notification);
             Controls.Add(button_manage_machine);
+            Controls.Add(machineScreen1);
+            Controls.Add(panel_manage_config);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "configForm";
@@ -341,9 +309,6 @@
             FormClosing += configForm_FormClosing;
             panel_manage_config.ResumeLayout(false);
             panel_manage_config.PerformLayout();
-            flowLayoutPanel.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -352,8 +317,7 @@
 
         private Button button_manage_machine;
         private Button button_manage_notification;
-        private Label label_last_change_time;
-        private Label label1;
+        private Label labelLastChangeTime;
         private Button button_reset;
         private Button button_exit_config_launch_main;
         private Panel panel_manage_config;
@@ -373,8 +337,6 @@
         private Label label41;
         private Label label43;
         private Label label44;
-        private FlowLayoutPanel flowLayoutPanel;
-        private Button buttonAddMachine;
-        private Panel panel1;
+        private MachineScreen machineScreen1;
     }
 }

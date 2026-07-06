@@ -11,18 +11,64 @@ namespace configApp
     public partial class MachineControl : UserControl
     {
         private MachineConfig machine;
-        public MachineControl(MachineConfig machine)
+
+        public event EventHandler? Modified;
+        public event EventHandler? DeleteRequested;
+        public MachineControl(MachineConfig config)
         {
             InitializeComponent();
-            this.machine = machine;
+            machine = config;
+
+            textBoxMachineName.Text = machine.Name;
+            textBoxMachineIpv4.Text = machine.Ipv4Address;
+            if(machine.PingRequestInterval >= numericUpDown_machine_interval.Minimum 
+                && machine.PingRequestInterval <= numericUpDown_machine_interval.Maximum)
+            {
+                numericUpDown_machine_interval.Value = machine.PingRequestInterval;
+            }
+
+            textBoxMachineName.Leave += OnNameLeave;
+            textBoxMachineIpv4.Leave += OnIpLeave;
+            numericUpDown_machine_interval.ValueChanged += OnIntervalChanged;
+
+            buttonDelete.Click += (s, e) => DeleteRequested?.Invoke(this, EventArgs.Empty);
+
+            textBoxMachineIpv4.TextChanged += (s, e) =>
+            {
+                bool valid = machine.IsIpv4AddressValid(textBoxMachineIpv4.Text);
+                textBoxMachineIpv4.BackColor = valid ? Color.White : Color.LightPink;
+            };
+
+            textBoxMachineName.TextChanged += (s, e) =>
+            {
+                bool valid = machine.IsNameValid(textBoxMachineName.Text);
+                textBoxMachineName.BackColor = valid ? Color.White : Color.LightPink;
+            };
+        }
+        public MachineConfig Machine
+        {
+            get { return machine; }
+        }
+
+        private void OnIpLeave(object? sender, EventArgs e)
+        {
+            machine.Ipv4Address = textBoxMachineIpv4.Text;
+            Modified?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void OnNameLeave(object? sender, EventArgs e)
+        {
+            machine.Name = textBoxMachineName.Text;
+            Modified?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void OnIntervalChanged(object? sender, EventArgs e)
+        {
+            machine.PingRequestInterval = (int)numericUpDown_machine_interval.Value;
+            Modified?.Invoke(this, EventArgs.Empty);
         }
 
         private void MachineControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public void CreateMachineConfigBloc(Panel panel)
         {
 
         }
