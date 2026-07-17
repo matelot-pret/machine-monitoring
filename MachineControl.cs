@@ -46,7 +46,6 @@ namespace configApp
             };
             // Handlers are wired after the prefill, so the label was never painted : do it once here.
             RefreshValidityLabel();
-            RefreshValidityLabel();
         }
         public MachineConfig Machine
         {

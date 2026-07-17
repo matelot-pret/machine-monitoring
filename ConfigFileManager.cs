@@ -41,17 +41,21 @@ namespace configApp
 
         public string GetRootPath()
         {
-            string path = " ";
+            //Anchor on the binary location, the working directory is weak
+            DirectoryInfo? dir = new DirectoryInfo(AppContext.BaseDirectory);
 
-            string actualPath = Path.GetFullPath(".");
-            for(int i = 0; i < 4; i++)
+            while(dir != null && dir.GetFiles("*.slnx").Length == 0)
             {
-                path = Directory.GetParent(actualPath).FullName;
-
-                actualPath = path;
+                dir = dir.Parent;
             }
 
-            return path;
+            if(dir == null)
+            {
+                Application.Exit();
+            }
+            //if dir is null there is nothing i can do, the projet path is broken
+
+            return dir.FullName;
         }
 
         private string GetConfigFilePath()

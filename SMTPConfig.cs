@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Mail;
 using System.Text;
 
 namespace configApp
@@ -18,19 +19,19 @@ namespace configApp
         public String Host
         {
             get { return smtpHost; }
-            set { if (!String.IsNullOrWhiteSpace(value)) smtpHost = value; }
+            set { smtpHost = value; }
         }
 
         public int NumPort
         {
             get { return port; }
-            set { if (value != 0) port = value; }
+            set { port = value; }
         }
 
         public String Passwd
         {
             get { return password; }
-            set { if (password != null) password = value; }
+            set { password = value; }
         }
 
         public String SenderMail
@@ -51,6 +52,20 @@ namespace configApp
             set { isSSLOn = value; }
         }
 
+        public static bool IsHostValid(string candidate)
+        {
+            return !String.IsNullOrWhiteSpace(candidate);
+        }
+
+        public static bool IsPortValid(string candidate)
+        {
+            return int.TryParse(candidate, out int parsed) && parsed >= 1 && parsed <= 65535;
+        }
+
+        public static bool IsMailValid(string candidate)
+        {
+            return MailAddress.TryCreate(candidate, out _);
+        }
 
     }
 }

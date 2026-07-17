@@ -50,7 +50,7 @@
             machineScreen1 = new MachineScreen();
             labelLastChangeTime = new Label();
             buttonReset = new Button();
-            buttonExitConfig_launch_main = new Button();
+            buttonExitConfigLaunchMain = new Button();
             panelManageConfig.SuspendLayout();
             SuspendLayout();
             // 
@@ -277,25 +277,26 @@
             buttonReset.UseVisualStyleBackColor = true;
             buttonReset.Click += buttonResetClick;
             // 
-            // buttonExitConfig_launch_main
+            // buttonExitConfigLaunchMain
             // 
-            buttonExitConfig_launch_main.Location = new Point(741, 752);
-            buttonExitConfig_launch_main.Name = "buttonExitConfig_launch_main";
-            buttonExitConfig_launch_main.Size = new Size(177, 47);
-            buttonExitConfig_launch_main.TabIndex = 7;
-            buttonExitConfig_launch_main.Text = "Exit configuration and launch monitoring\r\n";
-            buttonExitConfig_launch_main.UseVisualStyleBackColor = true;
-            buttonExitConfig_launch_main.Click += buttonExitConfigLaunchMainClick;
+            buttonExitConfigLaunchMain.Location = new Point(741, 752);
+            buttonExitConfigLaunchMain.Name = "buttonExitConfigLaunchMain";
+            buttonExitConfigLaunchMain.Size = new Size(177, 47);
+            buttonExitConfigLaunchMain.TabIndex = 7;
+            buttonExitConfigLaunchMain.Text = "Exit configuration and launch monitoring\r\n";
+            buttonExitConfigLaunchMain.UseVisualStyleBackColor = true;
+            buttonExitConfigLaunchMain.Click += buttonExitConfigLaunchMainClick;
             // 
             // configForm
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(1194, 808);
-            Controls.Add(buttonExitConfig_launch_main);
+            Controls.Add(buttonExitConfigLaunchMain);
             Controls.Add(buttonReset);
             Controls.Add(labelLastChangeTime);
             Controls.Add(buttonManageNotification);
@@ -319,7 +320,7 @@
         private Button buttonManageNotification;
         private Label labelLastChangeTime;
         private Button buttonReset;
-        private Button buttonExitConfig_launch_main;
+        private Button buttonExitConfigLaunchMain;
         private Panel panelManageConfig;
         private Label label35;
         private Label label34;

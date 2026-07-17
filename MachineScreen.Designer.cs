@@ -35,9 +35,12 @@
             // 
             // flowLayoutPanel
             // 
+            flowLayoutPanel.AutoScroll = true;
+            flowLayoutPanel.AutoSize = true;
+            flowLayoutPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             flowLayoutPanel.Location = new Point(3, 69);
             flowLayoutPanel.Name = "flowLayoutPanel";
-            flowLayoutPanel.Size = new Size(1053, 531);
+            flowLayoutPanel.Size = new Size(0, 0);
             flowLayoutPanel.TabIndex = 9;
             // 
             // label1
@@ -65,12 +68,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Controls.Add(label1);
             Controls.Add(flowLayoutPanel);
             Controls.Add(buttonAddMachine);
             Name = "MachineScreen";
-            Size = new Size(1063, 603);
+            Size = new Size(890, 72);
             ResumeLayout(false);
             PerformLayout();
         }

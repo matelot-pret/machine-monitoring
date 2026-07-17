@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Mail;
 using System.Net.Sockets;
 using System.Text;
 
@@ -29,7 +30,7 @@ namespace configApp
         public int PingRequestInterval
         {
             get { return pingRequestInterval; }
-            set { if (value > 0) pingRequestInterval = value; }
+            set { pingRequestInterval = value; }
         }
 
         public static bool IsNameValid(string candidate)
@@ -46,6 +47,12 @@ namespace configApp
         public static bool IsPingRequestIntervalValid(int candidate)
         {
             return candidate > 0;
+        }
+
+        public bool IsValid()
+        {
+            return IsNameValid(name) && IsPingRequestIntervalValid(pingRequestInterval)
+                && IsIpv4AddressValid(ipv4Address);
         }
 
     }
