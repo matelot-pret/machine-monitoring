@@ -5,6 +5,7 @@ namespace configApp
         private PanelManager panelManager;
         private ConfigAppManager appManager;
         private MachineScreen machineScreen;
+        private SMTPScreen smtpScreen;
         private bool isLoading = false;
 
         public configForm()
@@ -13,13 +14,14 @@ namespace configApp
 
             appManager = new ConfigAppManager();
             machineScreen = machineScreen1;
+            smtpScreen = smtpScreen1;
             machineScreen.Initialize(appManager.fileConfig.Configuration);
             machineScreen.MachineModified += OnMachineModified;
             isLoading = true;
             machineScreen.LoadMachines();
             isLoading = false;
 
-            panelManager = new PanelManager(machineScreen, panelManageConfig);
+            panelManager = new PanelManager(machineScreen, smtpScreen);
 
             if (appManager.fileConfig.IsConfigFileExists())
             {
@@ -34,7 +36,7 @@ namespace configApp
 
         private void buttonManageNotificationClick(object sender, EventArgs e)
         {
-            panelManager.Show(panelManageConfig);
+            panelManager.Show(smtpScreen);
         }
 
         private void buttonResetClick(object sender, EventArgs e)
