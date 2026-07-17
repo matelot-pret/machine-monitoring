@@ -33,17 +33,20 @@ namespace configApp
 
             buttonDelete.Click += (s, e) => DeleteRequested?.Invoke(this, EventArgs.Empty);
 
-            textBoxMachineIpv4.TextChanged += (s, e) =>
-            {
-                bool valid = machine.IsIpv4AddressValid(textBoxMachineIpv4.Text);
+            textBoxMachineIpv4.TextChanged += (s, e) => {
+                bool valid = MachineConfig.IsIpv4AddressValid(textBoxMachineIpv4.Text);
                 textBoxMachineIpv4.BackColor = valid ? Color.White : Color.LightPink;
+                RefreshValidityLabel();
             };
 
-            textBoxMachineName.TextChanged += (s, e) =>
-            {
-                bool valid = machine.IsNameValid(textBoxMachineName.Text);
+            textBoxMachineName.TextChanged += (s, e) => {
+                bool valid = MachineConfig.IsNameValid(textBoxMachineName.Text);
                 textBoxMachineName.BackColor = valid ? Color.White : Color.LightPink;
+                RefreshValidityLabel();
             };
+            // Handlers are wired after the prefill, so the label was never painted : do it once here.
+            RefreshValidityLabel();
+            RefreshValidityLabel();
         }
         public MachineConfig Machine
         {
@@ -66,6 +69,29 @@ namespace configApp
         {
             machine.PingRequestInterval = (int)numericUpDownMachineInterval.Value;
             Modified?.Invoke(this, EventArgs.Empty);
+            RefreshValidityLabel();
+        }
+
+        private bool IsMachineValid()
+        {
+            return MachineConfig.IsNameValid(textBoxMachineName.Text)
+                && MachineConfig.IsIpv4AddressValid(textBoxMachineIpv4.Text)
+                && MachineConfig.IsPingRequestIntervalValid((int)numericUpDownMachineInterval.Value);
+        }
+
+        private void RefreshValidityLabel()
+        {
+            bool valid = IsMachineValid();
+            if (valid)
+            {
+                labelIsValid.BackColor = Color.MediumSeaGreen;
+                labelIsValid.Text = "Valid Machine";
+            }
+            else
+            {
+                labelIsValid.BackColor = Color.IndianRed;
+                labelIsValid.Text = " Invalid Machine";
+            }
         }
 
     }

@@ -32,20 +32,20 @@ namespace configApp
             set { if (value > 0) pingRequestInterval = value; }
         }
 
-        public bool IsNameValid(string candidate)
+        public static bool IsNameValid(string candidate)
         {
             return !String.IsNullOrWhiteSpace(candidate);
         }
 
-        public bool IsIpv4AddressValid(string candidate)
+        public static bool IsIpv4AddressValid(string candidate)
         {
             return IPAddress.TryParse(candidate, out IPAddress addr)
                 && addr.AddressFamily == AddressFamily.InterNetwork;
         }
 
-        public bool IsPingRequestIntervalValid()
+        public static bool IsPingRequestIntervalValid(int candidate)
         {
-            return pingRequestInterval > 0;
+            return candidate > 0;
         }
 
     }
