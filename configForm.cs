@@ -19,7 +19,7 @@ namespace configApp
             machineScreen.LoadMachines();
             isLoading = false;
 
-            panelManager = new PanelManager(machineScreen, panel_manage_config);
+            panelManager = new PanelManager(machineScreen, panelManageConfig);
 
             if (appManager.fileConfig.IsConfigFileExists())
             {
@@ -27,23 +27,23 @@ namespace configApp
             }
         }
 
-        private void button_manage_machine_Click(object sender, EventArgs e)
+        private void buttonManageMachineClick(object sender, EventArgs e)
         {
             panelManager.Show(machineScreen);
         }
 
-        private void button_manage_notification_Click(object sender, EventArgs e)
+        private void buttonManageNotificationClick(object sender, EventArgs e)
         {
-            panelManager.Show(panel_manage_config);
+            panelManager.Show(panelManageConfig);
         }
 
-        private void button_reset_Click(object sender, EventArgs e)
+        private void buttonResetClick(object sender, EventArgs e)
         {
             appManager.ResetConfig();
             machineScreen.ClearMachines();
         }
 
-        private void button_exit_config_launch_main_Click(object sender, EventArgs e)
+        private void buttonExitConfigLaunchMainClick(object sender, EventArgs e)
         {
             appManager.fileConfig.SaveConfigToJsonFile();
             appManager.ExitAndLaunchMainApp();

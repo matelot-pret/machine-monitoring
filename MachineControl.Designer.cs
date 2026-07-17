@@ -33,15 +33,16 @@
             labelIP = new Label();
             textBoxMachineIpv4 = new TextBox();
             labelPingInterval = new Label();
-            numericUpDown_machine_interval = new NumericUpDown();
+            numericUpDownMachineInterval = new NumericUpDown();
             buttonDelete = new Button();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_machine_interval).BeginInit();
+            labelIsValid = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMachineInterval).BeginInit();
             SuspendLayout();
             // 
             // labelName
             // 
             labelName.AutoSize = true;
-            labelName.Location = new Point(15, 26);
+            labelName.Location = new Point(12, 46);
             labelName.Name = "labelName";
             labelName.Size = new Size(55, 18);
             labelName.TabIndex = 1;
@@ -49,7 +50,7 @@
             // 
             // textBoxMachineName
             // 
-            textBoxMachineName.Location = new Point(73, 23);
+            textBoxMachineName.Location = new Point(70, 43);
             textBoxMachineName.Margin = new Padding(3, 4, 3, 4);
             textBoxMachineName.Name = "textBoxMachineName";
             textBoxMachineName.PlaceholderText = "Enter the name";
@@ -60,7 +61,7 @@
             // 
             labelIP.AutoSize = true;
             labelIP.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelIP.Location = new Point(15, 72);
+            labelIP.Location = new Point(12, 92);
             labelIP.Name = "labelIP";
             labelIP.Size = new Size(105, 18);
             labelIP.TabIndex = 3;
@@ -68,7 +69,7 @@
             // 
             // textBoxMachineIpv4
             // 
-            textBoxMachineIpv4.Location = new Point(126, 69);
+            textBoxMachineIpv4.Location = new Point(123, 89);
             textBoxMachineIpv4.Margin = new Padding(3, 4, 3, 4);
             textBoxMachineIpv4.Name = "textBoxMachineIpv4";
             textBoxMachineIpv4.PlaceholderText = "Enter the IPv4 Address";
@@ -79,25 +80,25 @@
             // 
             labelPingInterval.AutoSize = true;
             labelPingInterval.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelPingInterval.Location = new Point(15, 125);
+            labelPingInterval.Location = new Point(12, 145);
             labelPingInterval.Name = "labelPingInterval";
             labelPingInterval.Size = new Size(221, 18);
             labelPingInterval.TabIndex = 5;
             labelPingInterval.Text = "Ping request interval in second :";
             // 
-            // numericUpDown_machine_interval
+            // numericUpDownMachineInterval
             // 
-            numericUpDown_machine_interval.Location = new Point(242, 123);
-            numericUpDown_machine_interval.Margin = new Padding(3, 4, 3, 4);
-            numericUpDown_machine_interval.Name = "numericUpDown_machine_interval";
-            numericUpDown_machine_interval.Size = new Size(49, 26);
-            numericUpDown_machine_interval.TabIndex = 6;
+            numericUpDownMachineInterval.Location = new Point(239, 143);
+            numericUpDownMachineInterval.Margin = new Padding(3, 4, 3, 4);
+            numericUpDownMachineInterval.Name = "numericUpDownMachineInterval";
+            numericUpDownMachineInterval.Size = new Size(49, 26);
+            numericUpDownMachineInterval.TabIndex = 6;
             // 
             // buttonDelete
             // 
             buttonDelete.BackColor = Color.IndianRed;
             buttonDelete.ForeColor = Color.White;
-            buttonDelete.Location = new Point(99, 166);
+            buttonDelete.Location = new Point(96, 186);
             buttonDelete.Margin = new Padding(3, 4, 3, 4);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(86, 28);
@@ -105,12 +106,25 @@
             buttonDelete.Text = "Delete";
             buttonDelete.UseVisualStyleBackColor = false;
             // 
+            // labelIsValid
+            // 
+            labelIsValid.AutoSize = true;
+            labelIsValid.BackColor = Color.IndianRed;
+            labelIsValid.ForeColor = SystemColors.ControlLightLight;
+            labelIsValid.Location = new Point(101, 13);
+            labelIsValid.Name = "labelIsValid";
+            labelIsValid.Size = new Size(111, 18);
+            labelIsValid.TabIndex = 8;
+            labelIsValid.Text = "Invalid Machine";
+            // 
             // MachineControl
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
+            BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(labelIsValid);
             Controls.Add(buttonDelete);
-            Controls.Add(numericUpDown_machine_interval);
+            Controls.Add(numericUpDownMachineInterval);
             Controls.Add(labelPingInterval);
             Controls.Add(textBoxMachineIpv4);
             Controls.Add(labelIP);
@@ -119,9 +133,8 @@
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "MachineControl";
-            Size = new Size(317, 208);
-            Load += MachineControl_Load;
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_machine_interval).EndInit();
+            Size = new Size(315, 219);
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMachineInterval).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -133,7 +146,8 @@
         private Label labelIP;
         private TextBox textBoxMachineIpv4;
         private Label labelPingInterval;
-        private NumericUpDown numericUpDown_machine_interval;
+        private NumericUpDown numericUpDownMachineInterval;
         private Button buttonDelete;
+        private Label labelIsValid;
     }
 }

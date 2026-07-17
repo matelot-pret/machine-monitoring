@@ -37,14 +37,14 @@
             // 
             flowLayoutPanel.Location = new Point(3, 69);
             flowLayoutPanel.Name = "flowLayoutPanel";
-            flowLayoutPanel.Size = new Size(1165, 531);
+            flowLayoutPanel.Size = new Size(1053, 531);
             flowLayoutPanel.TabIndex = 9;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(581, 30);
+            label1.Location = new Point(412, 30);
             label1.Name = "label1";
             label1.Size = new Size(475, 20);
             label1.TabIndex = 0;
@@ -70,7 +70,7 @@
             Controls.Add(flowLayoutPanel);
             Controls.Add(buttonAddMachine);
             Name = "MachineScreen";
-            Size = new Size(1171, 603);
+            Size = new Size(1063, 603);
             ResumeLayout(false);
             PerformLayout();
         }

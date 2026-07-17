@@ -21,15 +21,15 @@ namespace configApp
 
             textBoxMachineName.Text = machine.Name;
             textBoxMachineIpv4.Text = machine.Ipv4Address;
-            if(machine.PingRequestInterval >= numericUpDown_machine_interval.Minimum 
-                && machine.PingRequestInterval <= numericUpDown_machine_interval.Maximum)
+            if(machine.PingRequestInterval >= numericUpDownMachineInterval.Minimum 
+                && machine.PingRequestInterval <= numericUpDownMachineInterval.Maximum)
             {
-                numericUpDown_machine_interval.Value = machine.PingRequestInterval;
+                numericUpDownMachineInterval.Value = machine.PingRequestInterval;
             }
 
             textBoxMachineName.Leave += OnNameLeave;
             textBoxMachineIpv4.Leave += OnIpLeave;
-            numericUpDown_machine_interval.ValueChanged += OnIntervalChanged;
+            numericUpDownMachineInterval.ValueChanged += OnIntervalChanged;
 
             buttonDelete.Click += (s, e) => DeleteRequested?.Invoke(this, EventArgs.Empty);
 
@@ -64,13 +64,9 @@ namespace configApp
 
         private void OnIntervalChanged(object? sender, EventArgs e)
         {
-            machine.PingRequestInterval = (int)numericUpDown_machine_interval.Value;
+            machine.PingRequestInterval = (int)numericUpDownMachineInterval.Value;
             Modified?.Invoke(this, EventArgs.Empty);
         }
 
-        private void MachineControl_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button_manage_machine = new Button();
-            button_manage_notification = new Button();
-            panel_manage_config = new Panel();
+            buttonManageMachine = new Button();
+            buttonManageNotification = new Button();
+            panelManageConfig = new Panel();
             label44 = new Label();
             label43 = new Label();
             label42 = new Label();
             label41 = new Label();
             label40 = new Label();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            checkBox_SSL = new CheckBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            textBoxReceiverMail = new TextBox();
+            textBoxPassword = new TextBox();
+            textBoxSenderMail = new TextBox();
+            checkBoxSSL = new CheckBox();
+            textBoxPort = new TextBox();
+            textBoxSmtp = new TextBox();
             label39 = new Label();
             label38 = new Label();
             label37 = new Label();
@@ -49,58 +49,58 @@
             label34 = new Label();
             machineScreen1 = new MachineScreen();
             labelLastChangeTime = new Label();
-            button_reset = new Button();
-            button_exit_config_launch_main = new Button();
-            panel_manage_config.SuspendLayout();
+            buttonReset = new Button();
+            buttonExitConfig_launch_main = new Button();
+            panelManageConfig.SuspendLayout();
             SuspendLayout();
             // 
-            // button_manage_machine
+            // buttonManageMachine
             // 
-            button_manage_machine.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_manage_machine.Location = new Point(273, 25);
-            button_manage_machine.Margin = new Padding(3, 4, 3, 4);
-            button_manage_machine.Name = "button_manage_machine";
-            button_manage_machine.Size = new Size(153, 44);
-            button_manage_machine.TabIndex = 0;
-            button_manage_machine.Text = "Manage Machine(s) Configuration";
-            button_manage_machine.UseVisualStyleBackColor = true;
-            button_manage_machine.Click += button_manage_machine_Click;
+            buttonManageMachine.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonManageMachine.Location = new Point(273, 25);
+            buttonManageMachine.Margin = new Padding(3, 4, 3, 4);
+            buttonManageMachine.Name = "buttonManageMachine";
+            buttonManageMachine.Size = new Size(153, 44);
+            buttonManageMachine.TabIndex = 0;
+            buttonManageMachine.Text = "Manage Machine(s) Configuration";
+            buttonManageMachine.UseVisualStyleBackColor = true;
+            buttonManageMachine.Click += buttonManageMachineClick;
             // 
-            // button_manage_notification
+            // buttonManageNotification
             // 
-            button_manage_notification.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button_manage_notification.Location = new Point(741, 25);
-            button_manage_notification.Margin = new Padding(3, 4, 3, 4);
-            button_manage_notification.Name = "button_manage_notification";
-            button_manage_notification.Size = new Size(159, 44);
-            button_manage_notification.TabIndex = 2;
-            button_manage_notification.Text = "Manage Notification configuration";
-            button_manage_notification.UseVisualStyleBackColor = true;
-            button_manage_notification.Click += button_manage_notification_Click;
+            buttonManageNotification.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonManageNotification.Location = new Point(741, 25);
+            buttonManageNotification.Margin = new Padding(3, 4, 3, 4);
+            buttonManageNotification.Name = "buttonManageNotification";
+            buttonManageNotification.Size = new Size(159, 44);
+            buttonManageNotification.TabIndex = 2;
+            buttonManageNotification.Text = "Manage Notification configuration";
+            buttonManageNotification.UseVisualStyleBackColor = true;
+            buttonManageNotification.Click += buttonManageNotificationClick;
             // 
-            // panel_manage_config
+            // panelManageConfig
             // 
-            panel_manage_config.BorderStyle = BorderStyle.Fixed3D;
-            panel_manage_config.Controls.Add(label44);
-            panel_manage_config.Controls.Add(label43);
-            panel_manage_config.Controls.Add(label42);
-            panel_manage_config.Controls.Add(label41);
-            panel_manage_config.Controls.Add(label40);
-            panel_manage_config.Controls.Add(textBox5);
-            panel_manage_config.Controls.Add(textBox4);
-            panel_manage_config.Controls.Add(textBox3);
-            panel_manage_config.Controls.Add(checkBox_SSL);
-            panel_manage_config.Controls.Add(textBox2);
-            panel_manage_config.Controls.Add(textBox1);
-            panel_manage_config.Controls.Add(label39);
-            panel_manage_config.Controls.Add(label38);
-            panel_manage_config.Controls.Add(label37);
-            panel_manage_config.Controls.Add(label35);
-            panel_manage_config.Controls.Add(label34);
-            panel_manage_config.Location = new Point(12, 120);
-            panel_manage_config.Name = "panel_manage_config";
-            panel_manage_config.Size = new Size(1146, 610);
-            panel_manage_config.TabIndex = 1;
+            panelManageConfig.BorderStyle = BorderStyle.Fixed3D;
+            panelManageConfig.Controls.Add(label44);
+            panelManageConfig.Controls.Add(label43);
+            panelManageConfig.Controls.Add(label42);
+            panelManageConfig.Controls.Add(label41);
+            panelManageConfig.Controls.Add(label40);
+            panelManageConfig.Controls.Add(textBoxReceiverMail);
+            panelManageConfig.Controls.Add(textBoxPassword);
+            panelManageConfig.Controls.Add(textBoxSenderMail);
+            panelManageConfig.Controls.Add(checkBoxSSL);
+            panelManageConfig.Controls.Add(textBoxPort);
+            panelManageConfig.Controls.Add(textBoxSmtp);
+            panelManageConfig.Controls.Add(label39);
+            panelManageConfig.Controls.Add(label38);
+            panelManageConfig.Controls.Add(label37);
+            panelManageConfig.Controls.Add(label35);
+            panelManageConfig.Controls.Add(label34);
+            panelManageConfig.Location = new Point(24, 117);
+            panelManageConfig.Name = "panelManageConfig";
+            panelManageConfig.Size = new Size(1146, 610);
+            panelManageConfig.TabIndex = 1;
             // 
             // label44
             // 
@@ -152,56 +152,56 @@
             label40.TabIndex = 13;
             label40.Text = "The mail that will receive the notifications";
             // 
-            // textBox5
+            // textBoxReceiverMail
             // 
-            textBox5.Location = new Point(349, 449);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Enter the mail";
-            textBox5.Size = new Size(145, 26);
-            textBox5.TabIndex = 12;
+            textBoxReceiverMail.Location = new Point(349, 449);
+            textBoxReceiverMail.Name = "textBoxReceiverMail";
+            textBoxReceiverMail.PlaceholderText = "Enter the mail";
+            textBoxReceiverMail.Size = new Size(145, 26);
+            textBoxReceiverMail.TabIndex = 12;
             // 
-            // textBox4
+            // textBoxPassword
             // 
-            textBox4.Location = new Point(270, 372);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Enter the password";
-            textBox4.Size = new Size(142, 26);
-            textBox4.TabIndex = 11;
+            textBoxPassword.Location = new Point(270, 372);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.PlaceholderText = "Enter the password";
+            textBoxPassword.Size = new Size(142, 26);
+            textBoxPassword.TabIndex = 11;
             // 
-            // textBox3
+            // textBoxSenderMail
             // 
-            textBox3.Location = new Point(341, 288);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Enter the mail";
-            textBox3.Size = new Size(153, 26);
-            textBox3.TabIndex = 10;
+            textBoxSenderMail.Location = new Point(341, 288);
+            textBoxSenderMail.Name = "textBoxSenderMail";
+            textBoxSenderMail.PlaceholderText = "Enter the mail";
+            textBoxSenderMail.Size = new Size(153, 26);
+            textBoxSenderMail.TabIndex = 10;
             // 
-            // checkBox_SSL
+            // checkBoxSSL
             // 
-            checkBox_SSL.AutoSize = true;
-            checkBox_SSL.Location = new Point(182, 239);
-            checkBox_SSL.Name = "checkBox_SSL";
-            checkBox_SSL.RightToLeft = RightToLeft.Yes;
-            checkBox_SSL.Size = new Size(113, 22);
-            checkBox_SSL.TabIndex = 8;
-            checkBox_SSL.Text = "Activate SSL";
-            checkBox_SSL.UseVisualStyleBackColor = true;
+            checkBoxSSL.AutoSize = true;
+            checkBoxSSL.Location = new Point(182, 239);
+            checkBoxSSL.Name = "checkBoxSSL";
+            checkBoxSSL.RightToLeft = RightToLeft.Yes;
+            checkBoxSSL.Size = new Size(113, 22);
+            checkBoxSSL.TabIndex = 8;
+            checkBoxSSL.Text = "Activate SSL";
+            checkBoxSSL.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBoxPort
             // 
-            textBox2.Location = new Point(230, 154);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Enter the port";
-            textBox2.Size = new Size(100, 26);
-            textBox2.TabIndex = 7;
+            textBoxPort.Location = new Point(230, 154);
+            textBoxPort.Name = "textBoxPort";
+            textBoxPort.PlaceholderText = "Enter the port";
+            textBoxPort.Size = new Size(100, 26);
+            textBoxPort.TabIndex = 7;
             // 
-            // textBox1
+            // textBoxSmtp
             // 
-            textBox1.Location = new Point(274, 86);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Enter the SMTP host";
-            textBox1.Size = new Size(153, 26);
-            textBox1.TabIndex = 6;
+            textBoxSmtp.Location = new Point(274, 86);
+            textBoxSmtp.Name = "textBoxSmtp";
+            textBoxSmtp.PlaceholderText = "Enter the SMTP host";
+            textBoxSmtp.Size = new Size(153, 26);
+            textBoxSmtp.TabIndex = 6;
             // 
             // label39
             // 
@@ -253,7 +253,7 @@
             machineScreen1.AutoScroll = true;
             machineScreen1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             machineScreen1.BorderStyle = BorderStyle.Fixed3D;
-            machineScreen1.Location = new Point(12, 120);
+            machineScreen1.Location = new Point(24, 117);
             machineScreen1.Margin = new Padding(3, 2, 3, 2);
             machineScreen1.Name = "machineScreen1";
             machineScreen1.Size = new Size(1146, 610);
@@ -267,25 +267,25 @@
             labelLastChangeTime.Size = new Size(0, 18);
             labelLastChangeTime.TabIndex = 3;
             // 
-            // button_reset
+            // buttonReset
             // 
-            button_reset.Location = new Point(298, 757);
-            button_reset.Name = "button_reset";
-            button_reset.Size = new Size(160, 37);
-            button_reset.TabIndex = 4;
-            button_reset.Text = "Reset configuration\r\n";
-            button_reset.UseVisualStyleBackColor = true;
-            button_reset.Click += button_reset_Click;
+            buttonReset.Location = new Point(298, 757);
+            buttonReset.Name = "buttonReset";
+            buttonReset.Size = new Size(160, 37);
+            buttonReset.TabIndex = 4;
+            buttonReset.Text = "Reset configuration\r\n";
+            buttonReset.UseVisualStyleBackColor = true;
+            buttonReset.Click += buttonResetClick;
             // 
-            // button_exit_config_launch_main
+            // buttonExitConfig_launch_main
             // 
-            button_exit_config_launch_main.Location = new Point(741, 752);
-            button_exit_config_launch_main.Name = "button_exit_config_launch_main";
-            button_exit_config_launch_main.Size = new Size(177, 47);
-            button_exit_config_launch_main.TabIndex = 7;
-            button_exit_config_launch_main.Text = "Exit configuration and launch monitoring\r\n";
-            button_exit_config_launch_main.UseVisualStyleBackColor = true;
-            button_exit_config_launch_main.Click += button_exit_config_launch_main_Click;
+            buttonExitConfig_launch_main.Location = new Point(741, 752);
+            buttonExitConfig_launch_main.Name = "buttonExitConfig_launch_main";
+            buttonExitConfig_launch_main.Size = new Size(177, 47);
+            buttonExitConfig_launch_main.TabIndex = 7;
+            buttonExitConfig_launch_main.Text = "Exit configuration and launch monitoring\r\n";
+            buttonExitConfig_launch_main.UseVisualStyleBackColor = true;
+            buttonExitConfig_launch_main.Click += buttonExitConfigLaunchMainClick;
             // 
             // configForm
             // 
@@ -295,43 +295,43 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(1194, 808);
-            Controls.Add(button_exit_config_launch_main);
-            Controls.Add(button_reset);
+            Controls.Add(buttonExitConfig_launch_main);
+            Controls.Add(buttonReset);
             Controls.Add(labelLastChangeTime);
-            Controls.Add(button_manage_notification);
-            Controls.Add(button_manage_machine);
+            Controls.Add(buttonManageNotification);
+            Controls.Add(buttonManageMachine);
             Controls.Add(machineScreen1);
-            Controls.Add(panel_manage_config);
+            Controls.Add(panelManageConfig);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "configForm";
             Text = "Configuration";
             FormClosing += configForm_FormClosing;
-            panel_manage_config.ResumeLayout(false);
-            panel_manage_config.PerformLayout();
+            panelManageConfig.ResumeLayout(false);
+            panelManageConfig.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button_manage_machine;
-        private Button button_manage_notification;
+        private Button buttonManageMachine;
+        private Button buttonManageNotification;
         private Label labelLastChangeTime;
-        private Button button_reset;
-        private Button button_exit_config_launch_main;
-        private Panel panel_manage_config;
+        private Button buttonReset;
+        private Button buttonExitConfig_launch_main;
+        private Panel panelManageConfig;
         private Label label35;
         private Label label34;
-        private CheckBox checkBox_SSL;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private CheckBox checkBoxSSL;
+        private TextBox textBoxPort;
+        private TextBox textBoxSmtp;
         private Label label39;
         private Label label38;
         private Label label37;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
+        private TextBox textBoxReceiverMail;
+        private TextBox textBoxPassword;
+        private TextBox textBoxSenderMail;
         private Label label40;
         private Label label42;
         private Label label41;
