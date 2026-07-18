@@ -51,9 +51,10 @@ namespace configApp
 
             if(dir == null)
             {
-                Application.Exit();
+                //if dir is null there is nothing i can do, the projet path is broken
+                Environment.Exit(1);
             }
-            //if dir is null there is nothing i can do, the projet path is broken
+            
 
             return dir.FullName;
         }

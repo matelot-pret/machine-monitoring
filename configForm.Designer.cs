@@ -40,7 +40,7 @@
             // buttonManageMachine
             // 
             buttonManageMachine.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonManageMachine.Location = new Point(273, 25);
+            buttonManageMachine.Location = new Point(269, 35);
             buttonManageMachine.Margin = new Padding(3, 4, 3, 4);
             buttonManageMachine.Name = "buttonManageMachine";
             buttonManageMachine.Size = new Size(153, 44);
@@ -52,7 +52,7 @@
             // buttonManageNotification
             // 
             buttonManageNotification.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonManageNotification.Location = new Point(741, 25);
+            buttonManageNotification.Location = new Point(547, 35);
             buttonManageNotification.Margin = new Padding(3, 4, 3, 4);
             buttonManageNotification.Name = "buttonManageNotification";
             buttonManageNotification.Size = new Size(159, 44);
@@ -63,27 +63,24 @@
             // 
             // machineScreen1
             // 
-            machineScreen1.AutoScroll = true;
-            machineScreen1.AutoSize = true;
             machineScreen1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            machineScreen1.BorderStyle = BorderStyle.Fixed3D;
-            machineScreen1.Location = new Point(24, 117);
+            machineScreen1.Location = new Point(24, 127);
             machineScreen1.Margin = new Padding(3, 2, 3, 2);
             machineScreen1.Name = "machineScreen1";
-            machineScreen1.Size = new Size(953, 91);
+            machineScreen1.Size = new Size(1012, 704);
             machineScreen1.TabIndex = 8;
             // 
             // labelLastChangeTime
             // 
             labelLastChangeTime.AutoSize = true;
-            labelLastChangeTime.Location = new Point(741, 80);
+            labelLastChangeTime.Location = new Point(706, 97);
             labelLastChangeTime.Name = "labelLastChangeTime";
             labelLastChangeTime.Size = new Size(0, 18);
             labelLastChangeTime.TabIndex = 3;
             // 
             // buttonReset
             // 
-            buttonReset.Location = new Point(298, 757);
+            buttonReset.Location = new Point(93, 863);
             buttonReset.Name = "buttonReset";
             buttonReset.Size = new Size(160, 37);
             buttonReset.TabIndex = 4;
@@ -93,7 +90,7 @@
             // 
             // buttonExitConfigLaunchMain
             // 
-            buttonExitConfigLaunchMain.Location = new Point(741, 752);
+            buttonExitConfigLaunchMain.Location = new Point(623, 858);
             buttonExitConfigLaunchMain.Name = "buttonExitConfigLaunchMain";
             buttonExitConfigLaunchMain.Size = new Size(177, 47);
             buttonExitConfigLaunchMain.TabIndex = 7;
@@ -103,10 +100,11 @@
             // 
             // smtpScreen1
             // 
+            smtpScreen1.BorderStyle = BorderStyle.Fixed3D;
             smtpScreen1.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            smtpScreen1.Location = new Point(24, 117);
+            smtpScreen1.Location = new Point(24, 127);
             smtpScreen1.Name = "smtpScreen1";
-            smtpScreen1.Size = new Size(1146, 610);
+            smtpScreen1.Size = new Size(1012, 581);
             smtpScreen1.TabIndex = 9;
             // 
             // configForm
@@ -114,10 +112,9 @@
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(1194, 808);
+            ClientSize = new Size(1076, 917);
             Controls.Add(smtpScreen1);
             Controls.Add(buttonExitConfigLaunchMain);
             Controls.Add(buttonReset);

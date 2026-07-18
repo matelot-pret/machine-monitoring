@@ -39,7 +39,7 @@ namespace configApp
 
         private void buttonAddMachine_Click(object? sender, EventArgs e)
         {
-            if(config.Machines.Count >= 8)
+            if (config.Machines.Count >= 8)
             {
                 return;
             }
@@ -71,5 +71,9 @@ namespace configApp
             MachineModified?.Invoke(this, EventArgs.Empty);
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

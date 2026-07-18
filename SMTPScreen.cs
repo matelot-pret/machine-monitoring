@@ -11,6 +11,7 @@ namespace configApp
     public partial class SMTPScreen : UserControl
     {
         private Config config;
+        private FieldBinder binder;
 
         public event EventHandler? SmtpModified;
         public SMTPScreen()
@@ -21,42 +22,23 @@ namespace configApp
         public void Initialize(Config config)
         {
             this.config = config;
+            binder = new FieldBinder();
 
             textBoxSmtp.Text = config.Smtp.Host;
-            textBoxPort.Text = config.Smtp.NumPort.ToString();
+            textBoxPort.Text = config.Smtp.NumPort == 0 ? "" : config.Smtp.NumPort.ToString();
             textBoxSenderMail.Text = config.Smtp.SenderMail;
             textBoxPassword.Text = config.Smtp.Passwd;
             textBoxReceiverMail.Text = config.Smtp.ReceiverMail;
             checkBoxSSL.Checked = config.Smtp.IsSSLOn;
 
-            textBoxSmtp.TextChanged += (s, e) => {
-                bool valid = SMTPConfig.IsHostValid(textBoxSmtp.Text);
-                textBoxSmtp.BackColor = valid ? Color.White : Color.LightPink;
-            };
+            binder.FieldStored += (sender, args) => SmtpModified?.Invoke(this, EventArgs.Empty);
+            binder.Bind(textBoxSmtp, SMTPConfig.IsHostValid, hostValue => config.Smtp.Host = hostValue);
+            binder.Bind(textBoxPort, SMTPConfig.IsPortValid, portValue => { int.TryParse(portValue, out int port); config.Smtp.NumPort = port; });
+            binder.Bind(textBoxSenderMail, SMTPConfig.IsMailValid, mail => config.Smtp.SenderMail = mail);
+            binder.Bind(textBoxPassword, SMTPConfig.IsPasswdValid, password => config.Smtp.Passwd = password);
+            binder.Bind(textBoxReceiverMail, SMTPConfig.IsMailValid, mail => config.Smtp.ReceiverMail = mail);
 
-            textBoxPort.TextChanged += (s, e) =>
-            {
-                bool valid = SMTPConfig.IsPortValid(textBoxPort.Text);
-                textBoxPort.BackColor = valid ? Color.White : Color.LightPink;
-            };
-
-            textBoxSenderMail.TextChanged += (s, e) =>
-            {
-                bool valid = SMTPConfig.IsMailValid(textBoxSenderMail.Text);
-                textBoxSenderMail.BackColor = valid ? Color.White : Color.LightPink;
-            };
-
-            textBoxReceiverMail.TextChanged += (s, e) =>
-            {
-                bool valid = SMTPConfig.IsMailValid(textBoxReceiverMail.Text);
-                textBoxReceiverMail.BackColor = valid ? Color.White : Color.LightPink;
-            };
-
-            textBoxPassword.TextChanged += (s, e) =>
-            {
-                bool valid = SMTPConfig.IsPasswdValid(textBoxPassword.Text);
-                textBoxPassword.BackColor = valid ? Color.White : Color.LightPink;
-            };
+            checkBoxSSL.CheckedChanged += OnSslChanged;
         }
 
         public void ClearFields()
@@ -66,7 +48,13 @@ namespace configApp
             textBoxSenderMail.Clear();
             textBoxPassword.Clear();
             textBoxReceiverMail.Clear();
-            checkBoxSSL.Checked = true;
+            checkBoxSSL.Checked = false;
+        }
+
+        private void OnSslChanged(object? sender, EventArgs e)
+        {
+            config.Smtp.IsSSLOn = checkBoxSSL.Checked;
+            SmtpModified?.Invoke(this, EventArgs.Empty);
         }
 
     }

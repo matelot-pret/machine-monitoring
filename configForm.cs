@@ -79,9 +79,9 @@ namespace configApp
         {
             Config config = appManager.fileConfig.Configuration;
             bool configExists = appManager.fileConfig.IsConfigFileExists() || config.Machines.Count > 0;
-            buttonReset.Visible = configExists;
+            buttonReset.Enabled = configExists;
             labelLastChangeTime.Visible = configExists;
-            buttonExitConfigLaunchMain.Visible = config.IsComplete();
+            buttonExitConfigLaunchMain.Enabled = config.IsComplete();
         }
 
     }

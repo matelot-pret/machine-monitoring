@@ -50,7 +50,7 @@
             // 
             label44.AutoSize = true;
             label44.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label44.Location = new Point(361, 87);
+            label44.Location = new Point(303, 87);
             label44.Name = "label44";
             label44.Size = new Size(291, 20);
             label44.TabIndex = 33;
@@ -60,7 +60,7 @@
             // 
             label43.AutoSize = true;
             label43.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label43.Location = new Point(361, 170);
+            label43.Location = new Point(303, 170);
             label43.Name = "label43";
             label43.Size = new Size(326, 20);
             label43.TabIndex = 32;
@@ -70,7 +70,7 @@
             // 
             label42.AutoSize = true;
             label42.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label42.Location = new Point(361, 331);
+            label42.Location = new Point(303, 331);
             label42.Name = "label42";
             label42.Size = new Size(309, 20);
             label42.TabIndex = 31;
@@ -80,7 +80,7 @@
             // 
             label41.AutoSize = true;
             label41.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label41.Location = new Point(361, 432);
+            label41.Location = new Point(303, 432);
             label41.Name = "label41";
             label41.Size = new Size(355, 20);
             label41.TabIndex = 30;
@@ -90,7 +90,7 @@
             // 
             label40.AutoSize = true;
             label40.Font = new Font("Microsoft New Tai Lue", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label40.Location = new Point(361, 524);
+            label40.Location = new Point(303, 524);
             label40.Name = "label40";
             label40.Size = new Size(285, 20);
             label40.TabIndex = 29;
@@ -98,7 +98,7 @@
             // 
             // textBoxReceiverMail
             // 
-            textBoxReceiverMail.Location = new Point(552, 490);
+            textBoxReceiverMail.Location = new Point(494, 490);
             textBoxReceiverMail.Name = "textBoxReceiverMail";
             textBoxReceiverMail.PlaceholderText = "Enter the mail";
             textBoxReceiverMail.Size = new Size(165, 26);
@@ -106,7 +106,7 @@
             // 
             // textBoxPassword
             // 
-            textBoxPassword.Location = new Point(461, 397);
+            textBoxPassword.Location = new Point(403, 397);
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.PlaceholderText = "Enter the password";
             textBoxPassword.Size = new Size(162, 26);
@@ -114,7 +114,7 @@
             // 
             // textBoxSenderMail
             // 
-            textBoxSenderMail.Location = new Point(542, 296);
+            textBoxSenderMail.Location = new Point(484, 296);
             textBoxSenderMail.Name = "textBoxSenderMail";
             textBoxSenderMail.PlaceholderText = "Enter the mail";
             textBoxSenderMail.Size = new Size(174, 26);
@@ -125,7 +125,7 @@
             checkBoxSSL.AutoSize = true;
             checkBoxSSL.Checked = true;
             checkBoxSSL.CheckState = CheckState.Checked;
-            checkBoxSSL.Location = new Point(361, 238);
+            checkBoxSSL.Location = new Point(303, 238);
             checkBoxSSL.Name = "checkBoxSSL";
             checkBoxSSL.RightToLeft = RightToLeft.Yes;
             checkBoxSSL.Size = new Size(113, 22);
@@ -135,7 +135,7 @@
             // 
             // textBoxPort
             // 
-            textBoxPort.Location = new Point(416, 135);
+            textBoxPort.Location = new Point(358, 135);
             textBoxPort.Name = "textBoxPort";
             textBoxPort.PlaceholderText = "Enter the port";
             textBoxPort.Size = new Size(114, 26);
@@ -143,7 +143,7 @@
             // 
             // textBoxSmtp
             // 
-            textBoxSmtp.Location = new Point(466, 54);
+            textBoxSmtp.Location = new Point(408, 54);
             textBoxSmtp.Name = "textBoxSmtp";
             textBoxSmtp.PlaceholderText = "Enter the SMTP host";
             textBoxSmtp.Size = new Size(174, 26);
@@ -152,7 +152,7 @@
             // label39
             // 
             label39.AutoSize = true;
-            label39.Location = new Point(361, 493);
+            label39.Location = new Point(303, 493);
             label39.Name = "label39";
             label39.Size = new Size(166, 18);
             label39.TabIndex = 22;
@@ -161,7 +161,7 @@
             // label38
             // 
             label38.AutoSize = true;
-            label38.Location = new Point(361, 401);
+            label38.Location = new Point(303, 401);
             label38.Name = "label38";
             label38.Size = new Size(82, 18);
             label38.TabIndex = 21;
@@ -170,7 +170,7 @@
             // label37
             // 
             label37.AutoSize = true;
-            label37.Location = new Point(361, 299);
+            label37.Location = new Point(303, 299);
             label37.Name = "label37";
             label37.Size = new Size(153, 18);
             label37.TabIndex = 20;
@@ -179,7 +179,7 @@
             // label35
             // 
             label35.AutoSize = true;
-            label35.Location = new Point(361, 138);
+            label35.Location = new Point(303, 138);
             label35.Name = "label35";
             label35.Size = new Size(42, 18);
             label35.TabIndex = 19;
@@ -188,7 +188,7 @@
             // label34
             // 
             label34.AutoSize = true;
-            label34.Location = new Point(361, 58);
+            label34.Location = new Point(303, 58);
             label34.Name = "label34";
             label34.Size = new Size(88, 18);
             label34.TabIndex = 18;
@@ -217,7 +217,7 @@
             Controls.Add(label34);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "SMTPScreen";
-            Size = new Size(1142, 606);
+            Size = new Size(953, 610);
             ResumeLayout(false);
             PerformLayout();
         }

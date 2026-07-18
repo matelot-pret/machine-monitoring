@@ -20,6 +20,7 @@ namespace configApp
             InitializeComponent();
             machine = config;
             binder = new FieldBinder();
+            binder.FieldChanged += (sender, args) => RefreshValidityLabel();
 
             textBoxMachineName.Text = machine.Name;
             textBoxMachineIpv4.Text = machine.Ipv4Address;
@@ -31,11 +32,11 @@ namespace configApp
 
             numericUpDownMachineInterval.ValueChanged += OnIntervalChanged;
 
-            buttonDelete.Click += (s, e) => DeleteRequested?.Invoke(this, EventArgs.Empty);
+            buttonDelete.Click += (sender, args) => DeleteRequested?.Invoke(this, EventArgs.Empty);
 
-            binder.FieldStored += (s, e) => Modified?.Invoke(this, EventArgs.Empty);
-            binder.Bind(textBoxMachineName, MachineConfig.IsNameValid, v => machine.Name = v);
-            binder.Bind(textBoxMachineIpv4, MachineConfig.IsIpv4AddressValid, v => machine.Ipv4Address = v);
+            binder.FieldStored += (sender, args) => Modified?.Invoke(this, EventArgs.Empty);
+            binder.Bind(textBoxMachineName, MachineConfig.IsNameValid, val => machine.Name = val);
+            binder.Bind(textBoxMachineIpv4, MachineConfig.IsIpv4AddressValid, val => machine.Ipv4Address = val);
 
             // Handlers are wired after the prefill, so the label was never painted : do it once here.
             RefreshValidityLabel();
@@ -43,18 +44,6 @@ namespace configApp
         public MachineConfig Machine
         {
             get { return machine; }
-        }
-
-        private void OnIpLeave(object? sender, EventArgs e)
-        {
-            machine.Ipv4Address = textBoxMachineIpv4.Text;
-            Modified?.Invoke(this, EventArgs.Empty);
-        }
-
-        private void OnNameLeave(object? sender, EventArgs e)
-        {
-            machine.Name = textBoxMachineName.Text;
-            Modified?.Invoke(this, EventArgs.Empty);
         }
 
         private void OnIntervalChanged(object? sender, EventArgs e)
