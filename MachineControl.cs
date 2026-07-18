@@ -11,6 +11,7 @@ namespace configApp
     public partial class MachineControl : UserControl
     {
         private MachineConfig machine;
+        private FieldBinder binder;
 
         public event EventHandler? Modified;
         public event EventHandler? DeleteRequested;
@@ -18,6 +19,7 @@ namespace configApp
         {
             InitializeComponent();
             machine = config;
+            binder = new FieldBinder();
 
             textBoxMachineName.Text = machine.Name;
             textBoxMachineIpv4.Text = machine.Ipv4Address;
@@ -27,23 +29,14 @@ namespace configApp
                 numericUpDownMachineInterval.Value = machine.PingRequestInterval;
             }
 
-            textBoxMachineName.Leave += OnNameLeave;
-            textBoxMachineIpv4.Leave += OnIpLeave;
             numericUpDownMachineInterval.ValueChanged += OnIntervalChanged;
 
             buttonDelete.Click += (s, e) => DeleteRequested?.Invoke(this, EventArgs.Empty);
 
-            textBoxMachineIpv4.TextChanged += (s, e) => {
-                bool valid = MachineConfig.IsIpv4AddressValid(textBoxMachineIpv4.Text);
-                textBoxMachineIpv4.BackColor = valid ? Color.White : Color.LightPink;
-                RefreshValidityLabel();
-            };
+            binder.FieldStored += (s, e) => Modified?.Invoke(this, EventArgs.Empty);
+            binder.Bind(textBoxMachineName, MachineConfig.IsNameValid, v => machine.Name = v);
+            binder.Bind(textBoxMachineIpv4, MachineConfig.IsIpv4AddressValid, v => machine.Ipv4Address = v);
 
-            textBoxMachineName.TextChanged += (s, e) => {
-                bool valid = MachineConfig.IsNameValid(textBoxMachineName.Text);
-                textBoxMachineName.BackColor = valid ? Color.White : Color.LightPink;
-                RefreshValidityLabel();
-            };
             // Handlers are wired after the prefill, so the label was never painted : do it once here.
             RefreshValidityLabel();
         }

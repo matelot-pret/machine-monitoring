@@ -50,5 +50,14 @@ namespace configApp
             configSmtp = new SMTPConfig();
             lastChangeTime = DateTime.Now;
         }
+
+        public bool IsComplete()
+        {
+            foreach (MachineConfig machine in configMachines)
+            {
+                if (machine.IsValid()) { return configSmtp.IsValid(); }
+            }
+            return false;
+        }
     }
 }

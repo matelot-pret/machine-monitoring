@@ -16,7 +16,9 @@ namespace configApp
             machineScreen = machineScreen1;
             smtpScreen = smtpScreen1;
             machineScreen.Initialize(appManager.fileConfig.Configuration);
-            machineScreen.MachineModified += OnMachineModified;
+            smtpScreen.Initialize(appManager.fileConfig.Configuration);
+            machineScreen.MachineModified += OnConfigModified;
+            smtpScreen.SmtpModified += OnConfigModified;
             isLoading = true;
             machineScreen.LoadMachines();
             isLoading = false;
@@ -27,6 +29,8 @@ namespace configApp
             {
                 labelLastChangeTime.Text = appManager.LastChangeInfo();
             }
+
+            RefreshControlsVisibility();
         }
 
         private void buttonManageMachineClick(object sender, EventArgs e)
@@ -43,6 +47,10 @@ namespace configApp
         {
             appManager.ResetConfig();
             machineScreen.ClearMachines();
+            smtpScreen.ClearFields();
+            labelLastChangeTime.Enabled = false;
+            RefreshControlsVisibility();
+            labelLastChangeTime.Text = " ";
         }
 
         private void buttonExitConfigLaunchMainClick(object sender, EventArgs e)
@@ -56,7 +64,7 @@ namespace configApp
             appManager.fileConfig.SaveConfigToJsonFile();
         }
 
-        private void OnMachineModified(object? sender, EventArgs e)
+        private void OnConfigModified(object? sender, EventArgs e)
         {
             if (isLoading)
             {
@@ -64,6 +72,16 @@ namespace configApp
             }
             appManager.UpdateLastChangeTime();
             labelLastChangeTime.Text = appManager.LastChangeInfo();
+            RefreshControlsVisibility();
+        }
+
+        private void RefreshControlsVisibility()
+        {
+            Config config = appManager.fileConfig.Configuration;
+            bool configExists = appManager.fileConfig.IsConfigFileExists() || config.Machines.Count > 0;
+            buttonReset.Visible = configExists;
+            labelLastChangeTime.Visible = configExists;
+            buttonExitConfigLaunchMain.Visible = config.IsComplete();
         }
 
     }

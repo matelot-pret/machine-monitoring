@@ -59,12 +59,30 @@ namespace configApp
 
         public static bool IsPortValid(string candidate)
         {
-            return int.TryParse(candidate, out int parsed) && parsed >= 1 && parsed <= 65535;
+            return int.TryParse(candidate, out int parsed) && IsPortValid(parsed);
+        }
+
+        public static bool IsPortValid(int candidate)
+        {
+            return candidate >= 1 && candidate <= 65535;
         }
 
         public static bool IsMailValid(string candidate)
         {
             return MailAddress.TryCreate(candidate, out _);
+        }
+
+        public static bool IsPasswdValid(string candidate)
+        {
+            //TODO : sofisticate
+            return !String.IsNullOrWhiteSpace(candidate);
+        }
+
+        public bool IsValid()
+        {
+            return IsHostValid(smtpHost) && IsPortValid(port)
+                && IsMailValid(senderMail) && IsMailValid(receiverMail)
+                && IsPasswdValid(Passwd);
         }
 
     }

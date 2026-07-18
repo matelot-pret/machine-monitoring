@@ -53,6 +53,7 @@ namespace configApp
             flowLayoutPanel.Controls.Add(bloc);
 
             buttonAddMachine.Enabled = config.Machines.Count < 8;
+            MachineModified?.Invoke(this, EventArgs.Empty);
         }
 
         public void ClearMachines()
@@ -67,6 +68,7 @@ namespace configApp
             flowLayoutPanel.Controls.Remove(bloc);
             bloc.Dispose();
             buttonAddMachine.Enabled = config.Machines.Count < 8;
+            MachineModified?.Invoke(this, EventArgs.Empty);
         }
 
     }
