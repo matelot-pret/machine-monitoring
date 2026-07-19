@@ -10,8 +10,9 @@ namespace configApp
 {
     public partial class SMTPScreen : UserControl
     {
-        private Config config;
-        private FieldBinder binder;
+        private Config config = null!;
+        private FieldBinder binder = null!;
+        //null! to tell to the compilator that it is initialized outside the constructor before use. It is implies that i must never forget the Initialize() method 
 
         public event EventHandler? SmtpModified;
         public SMTPScreen()
@@ -21,7 +22,7 @@ namespace configApp
 
         public void Initialize(Config config)
         {
-            this.config = config;
+            this.config = config;//can accept any config, usefull for test
             binder = new FieldBinder();
 
             textBoxSmtp.Text = config.Smtp.Host;

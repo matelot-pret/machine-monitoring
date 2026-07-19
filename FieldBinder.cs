@@ -7,12 +7,12 @@ namespace configApp
     public class FieldBinder
     {
         private class FieldBinding
-        {
+        { 
             public required Func<string, bool> IsValid;
             public required Action<string> Store;
         }
 
-        private readonly Dictionary<Control, FieldBinding> bindings = new Dictionary<Control, FieldBinding>();
+        private readonly Dictionary<TextBox, FieldBinding> bindings = new Dictionary<TextBox, FieldBinding>();
 
         public event EventHandler? FieldStored;
         public event EventHandler? FieldChanged;

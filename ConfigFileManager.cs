@@ -8,12 +8,14 @@ namespace configApp
 {
     public class ConfigFileManager
     {
+        private string settingsPath;
         private string filePath;
         private Config config;
 
         public ConfigFileManager()
         {
-            filePath = GetConfigFilePath();
+            settingsPath = Path.Combine(GetRootPath(), "settings");
+            filePath = Path.Combine(settingsPath, "config.json");
             config = new Config();
             LoadConfig();
 
@@ -59,14 +61,10 @@ namespace configApp
             return dir.FullName;
         }
 
-        private string GetConfigFilePath()
-        {
-            return Path.Combine(GetRootPath(), "settings", "config.json");
-        }
-
         public void SaveConfigToJsonFile()
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(filePath));//create the directory if no exists
+
+            Directory.CreateDirectory(settingsPath);//create the directory if no exists
 
             string json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(filePath, json);

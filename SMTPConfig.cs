@@ -14,7 +14,13 @@ namespace configApp
         private String receiverMail;
         private bool isSSLOn;
 
-        public SMTPConfig(){}
+        public SMTPConfig(){
+            //to shut up the compilator
+            smtpHost = String.Empty;
+            password = String.Empty;
+            senderMail = String.Empty;
+            receiverMail = String.Empty;
+        }
 
         public String Host
         {

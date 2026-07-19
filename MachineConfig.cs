@@ -13,7 +13,10 @@ namespace configApp
         private String ipv4Address;
         private int pingRequestInterval;
 
-        public MachineConfig() { }
+        public MachineConfig() {
+            name = String.Empty;
+            ipv4Address = String.Empty;
+        }
 
         public String Name
         {
@@ -40,7 +43,7 @@ namespace configApp
 
         public static bool IsIpv4AddressValid(string candidate)
         {
-            return IPAddress.TryParse(candidate, out IPAddress addr)
+            return IPAddress.TryParse(candidate, out IPAddress? addr)
                 && addr.AddressFamily == AddressFamily.InterNetwork;
         }
 

@@ -48,9 +48,8 @@ namespace configApp
             appManager.ResetConfig();
             machineScreen.ClearMachines();
             smtpScreen.ClearFields();
-            labelLastChangeTime.Enabled = false;
+            labelLastChangeTime.Visible = false;
             RefreshControlsVisibility();
-            labelLastChangeTime.Text = " ";
         }
 
         private void buttonExitConfigLaunchMainClick(object sender, EventArgs e)
@@ -73,6 +72,7 @@ namespace configApp
             appManager.UpdateLastChangeTime();
             labelLastChangeTime.Text = appManager.LastChangeInfo();
             RefreshControlsVisibility();
+            labelLastChangeTime.Visible = true;
         }
 
         private void RefreshControlsVisibility()

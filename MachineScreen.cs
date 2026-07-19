@@ -13,7 +13,7 @@ namespace configApp
 
         public event EventHandler? MachineModified;
 
-        private Config config;
+        private Config config = null!;//to tell to the compilator that it is initialized outside the constructor before use. It is implies that i must never forget the Initialize() method 
         public MachineScreen()
         {
             InitializeComponent();
