@@ -14,40 +14,47 @@ namespace configApp
             configFile = new ConfigFileManager();
         }
 
-        public ConfigFileManager fileConfig
+        public ConfigFileManager FileConfig
         {
             get { return this.configFile; }
             set { if (value != null) configFile = value; }
         }
 
-        private void ExitConfig()
+        private static void ExitConfig()
         {
             Application.Exit();
         }
 
-        public void ExitAndLaunchMainApp()
+        public static void ExitAndLaunchMainApp()
         {
-            string root = configFile.GetRootPath();
-            string mainAppPath =  Path.Combine(root, "mainApp", "bin", "Debug", "net10.0-windows", "mainApp.exe");
-            Process.Start(mainAppPath);
+            string root = ConfigFileManager.GetRootPath();
+            string layout = Path.GetRelativePath(Path.Combine(root, "configApp"), AppContext.BaseDirectory);
 
+            string mainAppPath =  Path.Combine(root, "mainApp", layout, "mainApp.exe");
+
+            if (!File.Exists(mainAppPath))
+            {
+                return;//nothing to launch
+            }
+
+            Process.Start(mainAppPath);
             ExitConfig();
         }
 
         public void UpdateLastChangeTime()
         {
-            configFile.Configuration.changeTime = DateTime.Now;
+            configFile.Configuration.ChangeTime = DateTime.Now;
         }
 
         public void ResetConfig()
         {
             configFile.DeleteConfigFile();
-            configFile.Configuration.Clear();
+            configFile.Configuration.ClearMachineConfig();
         }
 
         public string LastChangeInfo()
         {
-            return "Last change saved on : " + configFile.Configuration.changeTime.ToString("HH:mm dd/MM/yyyy"); ;
+            return "Last change saved on : " + configFile.Configuration.ChangeTime.ToString("HH:mm dd/MM/yyyy"); ;
         }
     }
 }

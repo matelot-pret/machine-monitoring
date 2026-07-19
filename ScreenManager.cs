@@ -4,22 +4,22 @@ using System.Text;
 
 namespace configApp
 {
-    public class PanelManager
+    public class ScreenManager
     {
-        private List<Control> listPanels;
+        private readonly List<UserControl> listScreens;
 
 
         /*
          * constructor takes a list of panels, can also take one panel*/
-        public PanelManager(params Control[] list)
+        public ScreenManager(params UserControl[] list)
         {
-            listPanels = new List<Control>(list);
+            listScreens = new List<UserControl>(list);
 
             foreach(Control panel in list)
             {
                 panel.Visible = false;
             }
-            listPanels[0].Visible = true;
+            listScreens[0].Visible = true;
         }
 
         /*
@@ -29,7 +29,7 @@ namespace configApp
          */
         public void Show(Control panel)
         {
-            foreach (Control p in listPanels)
+            foreach (Control p in listScreens)
             {
                 p.Visible = false;
             }

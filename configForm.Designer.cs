@@ -1,6 +1,6 @@
 ﻿namespace configApp
 {
-    partial class configForm
+    partial class ConfigForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -107,7 +107,7 @@
             smtpScreen1.Size = new Size(1012, 581);
             smtpScreen1.TabIndex = 9;
             // 
-            // configForm
+            // ConfigForm
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -124,7 +124,7 @@
             Controls.Add(machineScreen1);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "configForm";
+            Name = "ConfigForm";
             Text = "Configuration";
             FormClosing += configForm_FormClosing;
             ResumeLayout(false);

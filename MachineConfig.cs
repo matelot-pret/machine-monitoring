@@ -52,7 +52,7 @@ namespace configApp
             return candidate > 0;
         }
 
-        public bool IsValid()
+        public bool IsMachineConfigValid()
         {
             return IsNameValid(name) && IsPingRequestIntervalValid(pingRequestInterval)
                 && IsIpv4AddressValid(ipv4Address);

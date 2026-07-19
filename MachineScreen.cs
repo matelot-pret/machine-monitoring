@@ -13,7 +13,7 @@ namespace configApp
 
         public event EventHandler? MachineModified;
 
-        private Config config = null!;//to tell to the compilator that it is initialized outside the constructor before use. It is implies that i must never forget the Initialize() method 
+        private Config config = null!;//to tell to the compilator to don't check the nullable. It is implies that i must never forget the Initialize() method 
         public MachineScreen()
         {
             InitializeComponent();
@@ -24,15 +24,20 @@ namespace configApp
             this.config = config;
         }
 
+        private void AddMachineBloc(MachineConfig machine)
+        {
+            MachineControl bloc = new MachineControl(machine);
+            bloc.DeleteRequested += (sender, args) => RemoveMachine(bloc);
+            bloc.Modified += (sender, args) => MachineModified?.Invoke(this, EventArgs.Empty);
+            flowLayoutPanel.Controls.Add(bloc);
+        }
+
         public void LoadMachines()
         {
             flowLayoutPanel.Controls.Clear();
             foreach (MachineConfig machine in config.Machines)
             {
-                MachineControl bloc = new MachineControl(machine);
-                bloc.DeleteRequested += (s, ev) => RemoveMachine(bloc);
-                bloc.Modified += (s, ev) => MachineModified?.Invoke(this, EventArgs.Empty);
-                flowLayoutPanel.Controls.Add(bloc);
+                AddMachineBloc(machine);
             }
             buttonAddMachine.Enabled = config.Machines.Count < 8;
         }
@@ -45,12 +50,9 @@ namespace configApp
             }
 
             MachineConfig machine = new MachineConfig();
-            config.AddMachine(machine);
+            config.AddMachineConfig(machine);
 
-            MachineControl bloc = new MachineControl(machine);
-            bloc.DeleteRequested += (s, ev) => RemoveMachine(bloc);
-            bloc.Modified += (s, ev) => MachineModified?.Invoke(this, EventArgs.Empty);
-            flowLayoutPanel.Controls.Add(bloc);
+            AddMachineBloc(machine);
 
             buttonAddMachine.Enabled = config.Machines.Count < 8;
             MachineModified?.Invoke(this, EventArgs.Empty);
@@ -64,16 +66,11 @@ namespace configApp
 
         private void RemoveMachine(MachineControl bloc)
         {
-            config.DeleteMachine(bloc.Machine);
+            config.DeleteMachineConfig(bloc.Machine);
             flowLayoutPanel.Controls.Remove(bloc);
             bloc.Dispose();
             buttonAddMachine.Enabled = config.Machines.Count < 8;
-            MachineModified?.Invoke(this, EventArgs.Empty);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            MachineModified?.Invoke(this, EventArgs.Empty);//executes all abonned methods
         }
     }
 }

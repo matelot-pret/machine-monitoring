@@ -28,34 +28,34 @@ namespace configApp
             set { configSmtp = value; }
         }
 
-        public DateTime changeTime
+        public DateTime ChangeTime
         {
             get { return lastChangeTime; }
             set { lastChangeTime = value; }
         }
 
-        public void AddMachine (MachineConfig machine)
+        public void AddMachineConfig (MachineConfig machine)
         {
                 configMachines.Add(machine); 
         }
 
-        public void DeleteMachine(MachineConfig bloc)
+        public void DeleteMachineConfig(MachineConfig bloc)
         {
             configMachines.Remove(bloc);
         }
 
-        public void Clear()
+        public void ClearMachineConfig()
         {
             configMachines.Clear();
             configSmtp = new SMTPConfig();
             lastChangeTime = DateTime.Now;
         }
 
-        public bool IsComplete()
+        public bool IsMachineConfigComplete()
         {
             foreach (MachineConfig machine in configMachines)
             {
-                if (machine.IsValid()) { return configSmtp.IsValid(); }
+                if (machine.IsMachineConfigValid()) { return configSmtp.IsSMTPConfigValid(); }
             }
             return false;
         }

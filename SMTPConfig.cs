@@ -84,7 +84,7 @@ namespace configApp
             return !String.IsNullOrWhiteSpace(candidate);
         }
 
-        public bool IsValid()
+        public bool IsSMTPConfigValid()
         {
             return IsHostValid(smtpHost) && IsPortValid(port)
                 && IsMailValid(senderMail) && IsMailValid(receiverMail)

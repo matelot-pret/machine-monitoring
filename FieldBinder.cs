@@ -26,8 +26,9 @@ namespace configApp
 
         private void OnFieldLeave(object? sender, EventArgs e)
         {
-            if (sender is TextBox box)//for remove the warnings
+            if (sender is not null)//for remove the warnings
             {
+                TextBox box = (TextBox)sender;
                 FieldBinding binding = bindings[box];
                 binding.Store(box.Text);
                 FieldStored?.Invoke(this, EventArgs.Empty);
@@ -36,8 +37,9 @@ namespace configApp
 
         private void OnFieldTextChanged(object? sender, EventArgs e)
         {
-            if(sender is TextBox box)//for remove the warning
+            if(sender is not null)//for remove the warning
             {
+                TextBox box = (TextBox)sender;
                 box.BackColor = bindings[box].IsValid(box.Text) ? Color.White : Color.LightPink;
                 FieldChanged?.Invoke(this, EventArgs.Empty);
             }

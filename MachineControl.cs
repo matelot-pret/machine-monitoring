@@ -10,8 +10,8 @@ namespace configApp
 {
     public partial class MachineControl : UserControl
     {
-        private MachineConfig machine;
-        private FieldBinder binder;
+        private readonly MachineConfig machine;
+        private readonly FieldBinder binder;
 
         public event EventHandler? Modified;
         public event EventHandler? DeleteRequested;

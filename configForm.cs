@@ -1,31 +1,31 @@
 namespace configApp
 {
-    public partial class configForm : Form
+    public partial class ConfigForm : Form
     {
-        private PanelManager panelManager;
-        private ConfigAppManager appManager;
-        private MachineScreen machineScreen;
-        private SMTPScreen smtpScreen;
-        private bool isLoading = false;
+        private readonly ScreenManager panelManager;
+        private readonly ConfigAppManager appManager;
+        private readonly MachineScreen machineScreen;
+        private readonly SMTPScreen smtpScreen;
+        private readonly bool isLoading;
 
-        public configForm()
+        public ConfigForm()
         {
             InitializeComponent();
 
             appManager = new ConfigAppManager();
             machineScreen = machineScreen1;
             smtpScreen = smtpScreen1;
-            machineScreen.Initialize(appManager.fileConfig.Configuration);
-            smtpScreen.Initialize(appManager.fileConfig.Configuration);
+            machineScreen.Initialize(appManager.FileConfig.Configuration);
+            smtpScreen.Initialize(appManager.FileConfig.Configuration);
             machineScreen.MachineModified += OnConfigModified;
             smtpScreen.SmtpModified += OnConfigModified;
             isLoading = true;
             machineScreen.LoadMachines();
             isLoading = false;
 
-            panelManager = new PanelManager(machineScreen, smtpScreen);
+            panelManager = new ScreenManager(machineScreen, smtpScreen);
 
-            if (appManager.fileConfig.IsConfigFileExists())
+            if (appManager.FileConfig.IsConfigFileExists())
             {
                 labelLastChangeTime.Text = appManager.LastChangeInfo();
             }
@@ -48,19 +48,18 @@ namespace configApp
             appManager.ResetConfig();
             machineScreen.ClearMachines();
             smtpScreen.ClearFields();
-            labelLastChangeTime.Visible = false;
             RefreshControlsVisibility();
         }
 
         private void buttonExitConfigLaunchMainClick(object sender, EventArgs e)
         {
-            appManager.fileConfig.SaveConfigToJsonFile();
-            appManager.ExitAndLaunchMainApp();
+            appManager.FileConfig.SaveConfigToJsonFile();
+            ConfigAppManager.ExitAndLaunchMainApp();
         }
 
         private void configForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            appManager.fileConfig.SaveConfigToJsonFile();
+            appManager.FileConfig.SaveConfigToJsonFile();
         }
 
         private void OnConfigModified(object? sender, EventArgs e)
@@ -77,11 +76,13 @@ namespace configApp
 
         private void RefreshControlsVisibility()
         {
-            Config config = appManager.fileConfig.Configuration;
-            bool configExists = appManager.fileConfig.IsConfigFileExists() || config.Machines.Count > 0;
-            buttonReset.Enabled = configExists;
+            Config config = appManager.FileConfig.Configuration;
+            bool configExists = appManager.FileConfig.IsConfigFileExists() || config.Machines.Count > 0
+                || smtpScreen.HasData();
+            //don't display useless elements
+            buttonReset.Visible = configExists;
             labelLastChangeTime.Visible = configExists;
-            buttonExitConfigLaunchMain.Enabled = config.IsComplete();
+            buttonExitConfigLaunchMain.Visible = config.IsMachineConfigComplete();
         }
 
     }

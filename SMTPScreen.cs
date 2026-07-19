@@ -58,5 +58,12 @@ namespace configApp
             SmtpModified?.Invoke(this, EventArgs.Empty);
         }
 
+        public bool HasData()
+        {
+            return !String.IsNullOrEmpty(textBoxSmtp.Text) || !String.IsNullOrEmpty(textBoxPort.Text)
+                || !String.IsNullOrEmpty(textBoxSenderMail.Text) || !String.IsNullOrEmpty(textBoxReceiverMail.Text)
+                || !String.IsNullOrEmpty(textBoxPassword.Text) || checkBoxSSL.Checked;
+        }
+
     }
 }

@@ -123,8 +123,6 @@
             // checkBoxSSL
             // 
             checkBoxSSL.AutoSize = true;
-            checkBoxSSL.Checked = true;
-            checkBoxSSL.CheckState = CheckState.Checked;
             checkBoxSSL.Location = new Point(303, 238);
             checkBoxSSL.Name = "checkBoxSSL";
             checkBoxSSL.RightToLeft = RightToLeft.Yes;

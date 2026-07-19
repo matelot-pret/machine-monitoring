@@ -35,13 +35,7 @@ namespace configApp
             set { config = value; }
         }
 
-        public string pathFile
-        {
-            get { return filePath; }
-            //no need to be change by another object
-        }
-
-        public string GetRootPath()
+        public static string GetRootPath()
         {
             //Anchor on the binary location, the working directory is weak
             DirectoryInfo? dir = new DirectoryInfo(AppContext.BaseDirectory);

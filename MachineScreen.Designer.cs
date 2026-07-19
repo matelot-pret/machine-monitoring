@@ -53,7 +53,6 @@
             label1.Size = new Size(475, 20);
             label1.TabIndex = 0;
             label1.Text = "Machine to monitor. The maximum number of machine to monitor is 8\r\n";
-            label1.Click += label1_Click;
             // 
             // buttonAddMachine
             // 
