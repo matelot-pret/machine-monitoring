@@ -6,7 +6,7 @@ namespace mainApp
 {
     public enum CommunicationState
     {
-        NonInitiate,
+        NonInitiated,
         Functional,
         NonFunctional
     }

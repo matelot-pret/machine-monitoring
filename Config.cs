@@ -4,7 +4,7 @@ using System.Text;
 
 namespace mainApp
 {
-    internal class Config
+    public class Config
     {
         private SMTPConfig configSmtp;
         private List<MachineConfig> configMachines;

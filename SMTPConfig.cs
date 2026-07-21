@@ -5,7 +5,7 @@ using System.Text;
 
 namespace mainApp
 {
-    internal class SMTPConfig
+    public class SMTPConfig
     {
         private String smtpHost;
         private int port;

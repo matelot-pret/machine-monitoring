@@ -6,12 +6,14 @@ using System.Text;
 
 namespace mainApp
 {
-    internal class MachineConfig
+    public class MachineConfig
     {
         private String name;
         private String ipv4Address;
         private int pingRequestInterval;
-        private readonly CommunicationState state;
+        private CommunicationState state;
+
+        public event EventHandler<StateChangedEvent> StateChanged;
 
         public MachineConfig()
         {
@@ -35,6 +37,22 @@ namespace mainApp
         {
             get { return pingRequestInterval; }
             set { pingRequestInterval = value; }
+        }
+
+        public CommunicationState State
+        {
+            get { return state; }
+            set { if (value == state)
+                {
+                    return;
+                }
+                CommunicationState oldState = state;
+                state = value;
+                if( StateChanged != null)
+                {
+                    StateChanged(this, new StateChangedEvent(oldState, value));
+                }
+            }
         }
 
         public static bool IsNameValid(string candidate)
