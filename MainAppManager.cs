@@ -18,7 +18,11 @@ namespace mainApp
             settingsPath = Path.Combine(GetRoothPath(), "settings");
             filePath = Path.Combine(settingsPath, "config.json");
             config = GetConfigFromFile();
-            config.RemoveInvalidMachine();
+            config.RemoveInvalidMachines();
+        }
+
+        public Config Config{
+            get { return config; }
         }
 
         public static string GetRoothPath()

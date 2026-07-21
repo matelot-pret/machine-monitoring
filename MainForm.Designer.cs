@@ -45,11 +45,11 @@
             // 
             labelNoMachine.AutoSize = true;
             labelNoMachine.Font = new Font("Bahnschrift", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNoMachine.Location = new Point(140, 317);
+            labelNoMachine.Location = new Point(150, 348);
             labelNoMachine.Margin = new Padding(4, 0, 4, 0);
             labelNoMachine.Name = "labelNoMachine";
             labelNoMachine.Size = new Size(761, 46);
-            labelNoMachine.TabIndex = 1;
+            labelNoMachine.TabIndex = 2;
             labelNoMachine.Text = "There is no machine to monitore. \r\nUse \"Open Configuration\" button to launch the configuration and set Machine to monitore";
             labelNoMachine.TextAlign = ContentAlignment.TopCenter;
             // 
@@ -61,7 +61,7 @@
             Controls.Add(labelNoMachine);
             Controls.Add(machineScreen1);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "MainForm";
             Text = "Form1";
             ResumeLayout(false);

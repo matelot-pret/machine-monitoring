@@ -41,7 +41,6 @@
             // 
             panel1.Controls.Add(checkBoxAlwaysOnTop);
             panel1.Controls.Add(labelNotificationSettingsInfo);
-            panel1.Controls.Add(flowLayoutPanel1);
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
@@ -72,7 +71,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Location = new Point(3, 91);
+            flowLayoutPanel1.Location = new Point(50, 100);
             flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(896, 552);
@@ -80,7 +79,7 @@
             // 
             // buttonLaunchConfig
             // 
-            buttonLaunchConfig.Location = new Point(82, 663);
+            buttonLaunchConfig.Location = new Point(176, 663);
             buttonLaunchConfig.Margin = new Padding(3, 4, 3, 4);
             buttonLaunchConfig.Name = "buttonLaunchConfig";
             buttonLaunchConfig.Size = new Size(120, 45);
@@ -90,7 +89,7 @@
             // 
             // buttonExitMainApp
             // 
-            buttonExitMainApp.Location = new Point(617, 663);
+            buttonExitMainApp.Location = new Point(721, 663);
             buttonExitMainApp.Margin = new Padding(3, 4, 3, 4);
             buttonExitMainApp.Name = "buttonExitMainApp";
             buttonExitMainApp.Size = new Size(97, 45);
@@ -104,6 +103,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(buttonExitMainApp);
             Controls.Add(buttonLaunchConfig);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);

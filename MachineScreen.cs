@@ -29,7 +29,7 @@ namespace mainApp
 
         public void DisplayMonitoredMachine()
         {
-            foreach(MachineConfig machine in config.Machines)
+            foreach (MachineConfig machine in config.Machines)
             {
                 AddMachineBloc(machine);
             }
