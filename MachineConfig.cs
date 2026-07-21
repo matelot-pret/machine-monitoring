@@ -13,7 +13,7 @@ namespace mainApp
         private int pingRequestInterval;
         private CommunicationState state;
 
-        public event EventHandler<StateChangedEvent> StateChanged;
+        public event EventHandler<StateChangedEvent>? StateChanged;
 
         public MachineConfig()
         {
