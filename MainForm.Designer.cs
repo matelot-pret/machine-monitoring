@@ -57,7 +57,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1158, 830);
+            ClientSize = new Size(1061, 830);
             Controls.Add(labelNoMachine);
             Controls.Add(machineScreen1);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
