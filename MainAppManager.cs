@@ -24,7 +24,7 @@ namespace mainApp
         {
             DirectoryInfo? dir = new DirectoryInfo(AppContext.BaseDirectory);
 
-            while(dir is not null && dir.GetFiles("*.slnx").Length == 0)
+            while(dir is not null && dir.GetFiles("*xlns").Length == 0)
             {
                 dir = dir.Parent;
             }
@@ -55,10 +55,10 @@ namespace mainApp
 
         public void ExitApp()
         {
-            Environment.Exit(0);
+            Environment.Exit(1);
         }
 
-        public void LaunchConfigApp()
+        public void LaunchMainApp()
         {
             string layout = Path.GetRelativePath(Path.Combine(GetRoothPath(), "mainApp"), AppContext.BaseDirectory);
             string configAppPath = Path.Combine(GetRoothPath(), "configApp", layout, "configApp.exe");
