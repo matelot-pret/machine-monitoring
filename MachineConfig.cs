@@ -43,8 +43,9 @@ namespace configApp
 
         public static bool IsIpv4AddressValid(string candidate)
         {
-            return IPAddress.TryParse(candidate, out IPAddress? addr)
-                && addr.AddressFamily == AddressFamily.InterNetwork;
+            return IPAddress.TryParse(candidate.Trim(), out IPAddress? addr)
+                && addr.AddressFamily == AddressFamily.InterNetwork
+                && addr.ToString() == candidate;
         }
 
         public static bool IsPingRequestIntervalValid(int candidate)
