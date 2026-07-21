@@ -31,10 +31,7 @@ namespace mainApp
         {
             foreach(MachineConfig machine in config.Machines)
             {
-                if (machine.IsMachineConfigValid())
-                {
-                    AddMachineBloc(machine);
-                }
+                AddMachineBloc(machine);
             }
         }
     }

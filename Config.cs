@@ -34,6 +34,17 @@ namespace mainApp
             set { lastChangeTime = value; }
         }
 
+        public void RemoveInvalidMachine()
+        {
+            foreach(MachineConfig machine in configMachines)
+            {
+                if(machine.IsMachineConfigValid() is false)
+                {
+                    configMachines.Remove(machine);
+                }
+            }
+        }
+
         public void AddMachineConfig(MachineConfig machine)
         {
             configMachines.Add(machine);
