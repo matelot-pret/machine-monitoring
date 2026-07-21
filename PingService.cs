@@ -40,7 +40,7 @@ namespace mainApp
             stopSignal.Set();
         }
 
-        public void SendPingRequest(MachineConfig machine)
+        private static void SendPingRequest(MachineConfig machine)
         {
             //using reclose ressources at the end of the bloc
             using (Ping ping = new Ping())
@@ -57,7 +57,7 @@ namespace mainApp
                         machine.State = CommunicationState.NonFunctional;
                     }
                 }
-                catch (PingException)
+                catch (Exception)
                 {
                     machine.State = CommunicationState.NonFunctional;
                 }
