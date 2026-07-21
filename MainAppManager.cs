@@ -9,9 +9,10 @@ namespace mainApp
 {
     internal class MainAppManager
     {
-        private Config config;
-        private string settingsPath;
-        private string filePath;
+        private readonly Config config;
+        private readonly string settingsPath;
+        private readonly string filePath;
+        private readonly PingService pingService;
 
         public MainAppManager()
         {
@@ -19,6 +20,17 @@ namespace mainApp
             filePath = Path.Combine(settingsPath, "config.json");
             config = GetConfigFromFile();
             config.RemoveInvalidMachines();
+            pingService = new PingService();
+        }
+
+        public void StartPings()
+        {
+            pingService.StartThreads(config);
+        }
+
+        public void StopPing()
+        {
+            pingService.StopThreads();
         }
 
         public Config Config{

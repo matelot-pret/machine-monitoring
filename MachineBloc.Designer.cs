@@ -84,6 +84,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
+            BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(textBoxMachineIpv4);
             Controls.Add(textBoxMachineName);
             Controls.Add(labelMachineIpv4);
@@ -92,7 +93,7 @@
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "MachineBloc";
-            Size = new Size(294, 196);
+            Size = new Size(292, 194);
             ResumeLayout(false);
             PerformLayout();
         }
