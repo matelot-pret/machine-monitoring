@@ -24,6 +24,7 @@ namespace mainApp
             labelNotificationSettingsInfo.Visible = !config.Smtp.IsSMTPConfigValid();
             checkBoxAlwaysOnTop.Checked = true;
             labelMailFailed.Visible = false;
+            TopMost = true;
 
             appManager.StartPings();
         }

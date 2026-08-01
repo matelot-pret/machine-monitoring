@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="mainApp.Config">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADIAACAAAAAIAAQAAAGAAAAQAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.MachineBloc">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACAQAgAQAACQBAACAAAAAAAgBAAAAAAAAAA=</HashCode>
+      <FileName>MachineBloc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.MachineConfig">
+    <Position X="2.25" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAAAAAAAAAAAAIQACQQAAAEEAAIEAAAABAAAACA=</HashCode>
+      <FileName>MachineConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.MachineScreen">
+    <Position X="5.75" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAIQAAAACAAAACAIAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MachineScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.MainAppManager">
+    <Position X="0.5" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAgAgACAAAAAAAAABAEAAQACUAAIAAAAAAAAAA=</HashCode>
+      <FileName>MainAppManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.MainForm">
+    <Position X="3" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAgMAACAAgCAAAACAACACAEIDAAAAAABAgAAAAAQ=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.Notifier">
+    <Position X="4.75" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEABAAAAgAAAAAAAACAAAAAAECAAAAAAAAAAAA=</HashCode>
+      <FileName>Notifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.PingService">
+    <Position X="7" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAACgAggAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAEAA=</HashCode>
+      <FileName>PingService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.Program">
+    <Position X="7.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.SMTPConfig">
+    <Position X="2.25" Y="15.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IQABAgAAAQAQAAAAgCAAAIAwQAAACAgAAQAAAgIAAAA=</HashCode>
+      <FileName>SMTPConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mainApp.StateChangedEvent">
+    <Position X="5.25" Y="15.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAEAAAAAAAAAAAAAAAAAAAAIAAAAAAIA=</HashCode>
+      <FileName>StateChangedEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="mainApp.CommunicationState">
+    <Position X="0.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommunicationState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -23,6 +23,11 @@ namespace mainApp
             pingService = new PingService();
         }
 
+        public Config Config
+        {
+            get { return config; }
+        }
+
         public void StartPings()
         {
             pingService.StartThreads(config);
@@ -31,10 +36,6 @@ namespace mainApp
         public void StopPing()
         {
             pingService.StopThreads();
-        }
-
-        public Config Config{
-            get { return config; }
         }
 
         public static string GetRoothPath()
