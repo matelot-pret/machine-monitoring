@@ -6,8 +6,8 @@ namespace mainApp
 {
     public enum CommunicationState
     {
-        NonInitiated,
-        Functional,
-        NonFunctional
+        NonInitiated,///no ping donne yet
+        Functional,///host reachable
+        NonFunctional///host unreachable
     }
 }
