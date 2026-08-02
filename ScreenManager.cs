@@ -9,8 +9,10 @@ namespace configApp
         private readonly List<UserControl> listScreens;
 
 
-        /*
-         * constructor takes a list of panels, can also take one panel*/
+        /// <summary>
+        /// Stores the screens, hides them all, shows them when asked
+        /// </summary>
+        /// <param name="list"> the screens to manage(one or more)</param>
         public ScreenManager(params UserControl[] list)
         {
             listScreens = new List<UserControl>(list);
@@ -22,11 +24,11 @@ namespace configApp
             listScreens[0].Visible = true;
         }
 
-        /*
-         * Show a panel
-         * param panel : the panel to hide 
-         * the panel object mustn't be null
-         */
+        /// <summary>
+        /// hides every managed screen then shows the given one
+        /// </summary>
+        /// <param name="panel"> the screen to show</param>
+        /// <note>panel must not be null</note>
         public void Show(Control panel)
         {
             foreach (Control p in listScreens)

@@ -15,11 +15,19 @@ namespace configApp
         //null! to tell to the compilator that it is initialized outside the constructor before use. It is implies that i must never forget the Initialize() method 
 
         public event EventHandler? SmtpModified;
+
+        /// <summary>
+        /// builds the control(config injected via Initialize)
+        /// </summary>
         public SMTPScreen()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// injects the shared config, prefills the six controls, then binds them
+        /// </summary>
+        /// <param name="config">the configuration whose SMTP block is edited.</param>
         public void Initialize(Config config)
         {
             this.config = config;//can accept any config, usefull for test
@@ -41,7 +49,10 @@ namespace configApp
 
             checkBoxSSL.CheckedChanged += OnSslChanged;
         }
-
+        
+        /// <summary>
+        /// empties the five textboxes and unchecks the SSL box
+        /// </summary>
         public void ClearFields()
         {
             textBoxSmtp.Clear();
@@ -52,12 +63,22 @@ namespace configApp
             checkBoxSSL.Checked = false;
         }
 
+        /// <summary>
+        /// mirrors the SSL checkbox into the config and raises SmtpModified
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnSslChanged(object? sender, EventArgs e)
         {
             config.Smtp.IsSSLOn = checkBoxSSL.Checked;
             SmtpModified?.Invoke(this, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// tells whether the user has entered any SMTP data
+        /// </summary>
+        /// <returns>true if any textbox is non-empty or SSL is checked</returns>
+        /// <note> reads the controls (screen-side), not the stored config.</note>
         public bool HasData()
         {
             return !String.IsNullOrEmpty(textBoxSmtp.Text) || !String.IsNullOrEmpty(textBoxPort.Text)

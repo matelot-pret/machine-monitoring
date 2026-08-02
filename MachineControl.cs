@@ -15,6 +15,12 @@ namespace configApp
 
         public event EventHandler? Modified;
         public event EventHandler? DeleteRequested;
+
+        /// <summary>
+        /// builds the bloc for a machine: prefills the fields, wires the binder, the interval, the delete
+        /// button and paints the validity label once
+        /// </summary>
+        /// <param name="config">the machine bloc edits(shared reference)</param>
         public MachineControl(MachineConfig config)
         {
             InitializeComponent();
@@ -41,11 +47,20 @@ namespace configApp
             // Handlers are wired after the prefill, so the label was never painted : do it once here.
             RefreshValidityLabel();
         }
+
+        /// <summary>
+        /// get/set the edited machine
+        /// </summary>
         public MachineConfig Machine
         {
             get { return machine; }
         }
 
+        /// <summary>
+        /// writes the new interval into the machine. Raises Modified and refreshes the validity label
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnIntervalChanged(object? sender, EventArgs e)
         {
             machine.PingRequestInterval = (int)numericUpDownMachineInterval.Value;
@@ -53,6 +68,10 @@ namespace configApp
             RefreshValidityLabel();
         }
 
+        /// <summary>
+        /// tells whether the on-screen values form a valid machine
+        /// </summary>
+        /// <returns>true if name, IPv4 and interval read from the controls are all valid</returns>
         private bool IsMachineValid()
         {
             return MachineConfig.IsNameValid(textBoxMachineName.Text)
@@ -60,6 +79,9 @@ namespace configApp
                 && MachineConfig.IsPingRequestIntervalValid((int)numericUpDownMachineInterval.Value);
         }
 
+        /// <summary>
+        /// paints the validity label green/"Valid machine" or red/"Invalid machine" fron isMachineValid()
+        /// </summary>
         private void RefreshValidityLabel()
         {
             bool valid = IsMachineValid();

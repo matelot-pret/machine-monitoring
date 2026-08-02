@@ -8,6 +8,11 @@ namespace configApp
         private readonly SMTPScreen smtpScreen;
         private readonly bool isLoading;
 
+        /// <summary>
+        /// builds the app: creates the manager, injects the config into both screens, 
+        /// wires their modified events, loads machines (guarded by isLoading),
+        /// builds the ScreenManager, and refreshes visibility.
+        /// </summary>
         public ConfigForm()
         {
             InitializeComponent();
@@ -33,16 +38,31 @@ namespace configApp
             RefreshControlsVisibility();
         }
 
+        /// <summary>
+        /// show the machine screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonManageMachineClick(object sender, EventArgs e)
         {
             panelManager.Show(machineScreen);
         }
 
+        /// <summary>
+        /// show the smtp screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonManageNotificationClick(object sender, EventArgs e)
         {
             panelManager.Show(smtpScreen);
         }
 
+        /// <summary>
+        /// resets the config, clears all screens and refreshs visibility
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonResetClick(object sender, EventArgs e)
         {
             appManager.ResetConfig();
@@ -51,17 +71,33 @@ namespace configApp
             RefreshControlsVisibility();
         }
 
+        /// <summary>
+        /// saves the config to file then launches mainApp and exits
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonExitConfigLaunchMainClick(object sender, EventArgs e)
         {
             appManager.FileConfig.SaveConfigToJsonFile();
             ConfigAppManager.ExitAndLaunchMainApp();
         }
 
+        /// <summary>
+        /// saves the config to file on window close
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void configForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             appManager.FileConfig.SaveConfigToJsonFile();
         }
 
+        /// <summary>
+        /// on any machine/SMTP change (unless loading), 
+        /// updates the timestamp, its label, the controls visibility, and reveals the timestamp label.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnConfigModified(object? sender, EventArgs e)
         {
             if (isLoading)
@@ -74,6 +110,11 @@ namespace configApp
             labelLastChangeTime.Visible = true;
         }
 
+
+        /// <summary>
+        /// shows/hides reset button, timestamp label (if config exists or has data) 
+        /// and the exit&launch button (if the config is complete). 
+        /// </summary>
         private void RefreshControlsVisibility()
         {
             Config config = appManager.FileConfig.Configuration;
