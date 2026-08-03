@@ -9,6 +9,6 @@
 	  <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 	<ItemGroup>
-		<ProjectReference Include="-´..\mainApp\mainApp.csproj"></ProjectReference>
+		<ProjectReference Include="..\mainApp\mainApp.csproj"></ProjectReference>
 	</ItemGroup>
 </Project>
