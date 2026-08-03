@@ -28,31 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            tableLayoutPanel = new TableLayoutPanel();
+            labelNoMachine = new Label();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // tableLayoutPanel
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(13, 4);
-            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(896, 552);
-            flowLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel.AutoSize = true;
+            tableLayoutPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutPanel.ColumnCount = 3;
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel.Location = new Point(3, 3);
+            tableLayoutPanel.Name = "tableLayoutPanel";
+            tableLayoutPanel.RowCount = 1;
+            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent));
+            tableLayoutPanel.Size = new Size(0, 0);
+            tableLayoutPanel.TabIndex = 0;
+            // 
+            // labelNoMachine
+            // 
+            labelNoMachine.AutoSize = true;
+            labelNoMachine.Font = new Font("Bahnschrift", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelNoMachine.Location = new Point(4, 25);
+            labelNoMachine.Margin = new Padding(4, 0, 4, 25);
+            labelNoMachine.Name = "labelNoMachine";
+            labelNoMachine.Size = new Size(761, 46);
+            labelNoMachine.TabIndex = 3;
+            labelNoMachine.Text = "There is no machine to monitore. \r\nUse \"Open Configuration\" button to launch the configuration and set Machine to monitor";
+            labelNoMachine.TextAlign = ContentAlignment.TopCenter;
             // 
             // MachineScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(flowLayoutPanel1);
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            Controls.Add(labelNoMachine);
+            Controls.Add(tableLayoutPanel);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "MachineScreen";
-            Size = new Size(926, 572);
+            Size = new Size(769, 96);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private FlowLayoutPanel flowLayoutPanel1;
+
+        private TableLayoutPanel tableLayoutPanel;
+        private Label labelNoMachine;
     }
 }

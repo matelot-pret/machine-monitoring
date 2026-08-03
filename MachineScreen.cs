@@ -27,6 +27,7 @@ namespace mainApp
         public void Initialize(Config config)
         {
             this.config = config;
+            labelNoMachine.Visible = !config.HasOneMachine();
         }
 
         /// <summary>
@@ -36,7 +37,7 @@ namespace mainApp
         private void AddMachineBloc(MachineConfig machine)
         {
             MachineBloc bloc = new MachineBloc(machine);
-            flowLayoutPanel1.Controls.Add(bloc);
+            tableLayoutPanel.Controls.Add(bloc);
         }
 
         /// <summary>
