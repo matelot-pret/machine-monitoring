@@ -8,7 +8,6 @@ namespace mainApp
     {
         private SMTPConfig configSmtp;
         private List<MachineConfig> configMachines;
-        private DateTime lastChangeTime;
 
         /// <summary>builds an empty configuration (fresh SMTP block, empty machine list)</summary>
         public Config()
@@ -49,7 +48,7 @@ namespace mainApp
         /// <returns>true if the list is non empty</returns>
         public bool HasOneMachine()
         {
-            return configMachines.Count == 0; 
+            return configMachines.Count > 0; 
         }
     }
 }

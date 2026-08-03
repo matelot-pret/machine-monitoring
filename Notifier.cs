@@ -58,7 +58,7 @@ namespace mainApp
         /// <param name="old">the old state</param>
         /// <param name="newOne">the new state</param>
         /// <returns>true only for Functional↔NonFunctional (neither state is NonInitiated, and they differ).</returns>
-        private static bool ShouldSendMail(CommunicationState old, CommunicationState newOne)
+        public static bool ShouldSendMail(CommunicationState old, CommunicationState newOne)
         {
             return (old != CommunicationState.NonInitiated && newOne != CommunicationState.NonInitiated) 
                 && old != newOne;

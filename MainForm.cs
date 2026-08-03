@@ -26,7 +26,7 @@ namespace mainApp
             notifier.MailFailed += OnMailFailed;
             notifier.SubscribeTo(config.Machines);
 
-            labelNoMachine.Visible = config.HasOneMachine();
+            labelNoMachine.Visible = !config.HasOneMachine();
             labelNotificationSettingsInfo.Visible = !config.Smtp.IsSMTPConfigValid();
             checkBoxAlwaysOnTop.Checked = true;
             labelMailFailed.Visible = false;
