@@ -35,6 +35,8 @@ namespace configApp
                 labelLastChangeTime.Text = appManager.LastChangeInfo();
             }
 
+            labelLastChangeTime.Visible = appManager.FileConfig.Configuration.Machines.Count > 0;
+
             RefreshControlsVisibility();
         }
 
@@ -89,7 +91,10 @@ namespace configApp
         /// <param name="e"></param>
         private void configForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            appManager.FileConfig.SaveConfigToJsonFile();
+            if (ConfigExists())
+            {
+                appManager.FileConfig.SaveConfigToJsonFile();
+            }
         }
 
         /// <summary>
@@ -107,7 +112,6 @@ namespace configApp
             appManager.UpdateLastChangeTime();
             labelLastChangeTime.Text = appManager.LastChangeInfo();
             RefreshControlsVisibility();
-            labelLastChangeTime.Visible = true;
         }
 
 
@@ -117,14 +121,24 @@ namespace configApp
         /// </summary>
         private void RefreshControlsVisibility()
         {
-            Config config = appManager.FileConfig.Configuration;
-            bool configExists = appManager.FileConfig.IsConfigFileExists() || config.Machines.Count > 0
-                || smtpScreen.HasData();
+            bool configExists = ConfigExists();
             //don't display useless elements
             buttonReset.Visible = configExists;
             labelLastChangeTime.Visible = configExists;
+            Config config = appManager.FileConfig.Configuration;
             buttonExitConfigLaunchMain.Visible = config.IsMachineConfigComplete();
         }
 
+        /// <summary>
+        /// tells whether a configuration exists in any form : a saved file, 
+        /// at least one machine, or SMTP data entered on screen
+        /// </summary>
+        /// <returns>true if there is something worth saving or resetting</returns>
+        private bool ConfigExists()
+        {
+            return appManager.FileConfig.IsConfigFileExists()
+                || appManager.FileConfig.Configuration.Machines.Count > 0
+                || smtpScreen.HasData();
+        }
     }
 }

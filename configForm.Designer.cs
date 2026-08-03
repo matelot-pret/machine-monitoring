@@ -64,10 +64,10 @@
             // machineScreen1
             // 
             machineScreen1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            machineScreen1.Location = new Point(24, 127);
+            machineScreen1.Location = new Point(24, 107);
             machineScreen1.Margin = new Padding(3, 2, 3, 2);
             machineScreen1.Name = "machineScreen1";
-            machineScreen1.Size = new Size(1012, 704);
+            machineScreen1.Size = new Size(1012, 581);
             machineScreen1.TabIndex = 8;
             // 
             // labelLastChangeTime
@@ -102,7 +102,7 @@
             // 
             smtpScreen1.BorderStyle = BorderStyle.Fixed3D;
             smtpScreen1.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            smtpScreen1.Location = new Point(24, 127);
+            smtpScreen1.Location = new Point(12, 118);
             smtpScreen1.Name = "smtpScreen1";
             smtpScreen1.Size = new Size(1012, 581);
             smtpScreen1.TabIndex = 9;

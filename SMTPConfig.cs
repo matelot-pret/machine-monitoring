@@ -92,7 +92,7 @@ namespace configApp
         }
 
         /// <summary>tells whether a port number is in the legal range</summary>
-        /// <param name="candidate"> the string to checks</param>
+        /// <param name="candidate"> the number to checks</param>
         /// <returns>true if 1 <= candidate <= 65535 false otherwise</returns>
         public static bool IsPortValid(int candidate)
         {
@@ -112,7 +112,7 @@ namespace configApp
         /// <returns>true if not null/whitespace</returns>
         public static bool IsPasswdValid(string candidate)
         {
-            //TODO : sofisticate
+            //No need to check the length or characters; the password is provided by the SMTP client.
             return !String.IsNullOrWhiteSpace(candidate);
         }
 

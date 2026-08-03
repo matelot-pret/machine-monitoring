@@ -41,7 +41,7 @@
             flowLayoutPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             flowLayoutPanel.Location = new Point(3, 78);
             flowLayoutPanel.Name = "flowLayoutPanel";
-            flowLayoutPanel.Size = new Size(1005, 601);
+            flowLayoutPanel.Size = new Size(977, 601);
             flowLayoutPanel.TabIndex = 9;
             // 
             // label1
@@ -66,12 +66,11 @@
             // 
             // panel1
             // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(buttonAddMachine);
             panel1.Location = new Point(6, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1003, 78);
+            panel1.Size = new Size(974, 78);
             panel1.TabIndex = 0;
             // 
             // MachineScreen
@@ -82,7 +81,7 @@
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel);
             Name = "MachineScreen";
-            Size = new Size(1012, 683);
+            Size = new Size(983, 683);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
