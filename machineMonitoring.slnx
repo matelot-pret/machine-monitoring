@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="configApp/configApp.csproj" />
+  <Project Path="mainApp/mainApp.csproj" />
+  <Project Path="unitTest/unitTest.csproj" />
+</Solution>

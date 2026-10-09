@@ -1,0 +1,11 @@
+# Fichiers générés par la compilation
+**/bin/
+**/obj/
+TestResults/
+
+# Fichiers propres à Visual Studio et à chaque poste
+.vs/
+*.user
+
+# Configuration locale : contient le mot de passe SMTP, ne jamais la publier
+settings/
